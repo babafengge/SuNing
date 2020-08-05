@@ -5,7 +5,17 @@
 </template>
 
 <style>
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body,#app{
+  height: 100%;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  color: #222;
+}
 </style>
 
 
