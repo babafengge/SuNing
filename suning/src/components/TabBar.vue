@@ -1,6 +1,15 @@
 <template>
-    <div class="container">
-        我是底部
-    </div>
+  <div class="tab-bar">
+
+  </div>
 </template>
 
+<script>
+export default {
+  
+}
+</script>
+
+<style>
+
+</style>
