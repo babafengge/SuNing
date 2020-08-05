@@ -16,6 +16,9 @@ html,body,#app{
   background-color: #f2f2f2;
   color: #222;
 }
+a{
+  text-decoration: none;
+}
 </style>
 
 
