@@ -1,25 +1,29 @@
 <template>
     <div class="ify-box">
-        <div class="ify-header fix">
-            <div class="ify-hdleft fl">商品分类</div>
-            <div class="ify-hdright fl">
+        <div class="ify-header">
+            <div class="ify-hdleft">商品分类</div>
+            <div class="ify-hdright">
                 <p>运动手表</p>
             </div>
         </div>
         <div class="ify-body">
             <div class="ify-bdleft">
-                <div v-for="(item,index) in ifylist" :key="item.title" @click="ifyitembtn(index)">
-                    <span :class="{active:index==count}">{{item.title}}</span>
+                <div v-for="(item,index) in ifylist" :key="item.title" @click="ifyitembtn(index)" :class="{active:index==count}">
+                    <span >{{item.title}}</span>
                 </div>
             </div>
             <div class="ify-bdright">
-                这是身体右边部分
+                <recommendation></recommendation>
             </div>
         </div>
+        <tabbar></tabbar>
     </div>
 </template>
 
 <script>
+import TabBar from "../components/TabBar.vue"
+import recommendation from "../components/classify/recommendation.vue"
+
 export default {
     data(){
         return {
@@ -65,6 +69,11 @@ export default {
             count:0
         }
     },
+    components:{
+        "tabbar":TabBar,
+        "recommendation":recommendation,
+
+    },
     methods:{
         ifyitembtn(index){
             this.count=index;
@@ -76,17 +85,15 @@ export default {
 <style >
 .ify-box{
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .ify-header{
-     width: 100%;
+    width: 100%;
     background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    /* zoom: 1; */
+    display: flex;
 }
 .ify-hdleft{
 height: 100%;
@@ -95,13 +102,14 @@ font-size: .72rem;
 line-height: 2.16rem;
 text-align: center;
 } 
-.fl{float: left;}
+
 .ify-hdright{
 width: 11.4rem;
 height: 2.16rem;
 }
 .ify-hdright p{
-    width: 10.44rem;
+    flex-grow: 1;
+    /* width: 10.44rem; */
     height: 1.28rem;
     padding-left: 1.32rem;
     background: url("../assets/flyimg/search-icon.png") .36rem .28rem/.72rem .72rem no-repeat #f7f7f7;
@@ -113,26 +121,37 @@ height: 2.16rem;
 }
 .ify-body{
     flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    overflow: hidden;
 }
 .ify-bdleft{
     width: 3.6rem;
-    height: calc(100% - 2.16rem - 1.96rem);
     overflow: auto;
-    position: fixed;
-    left: 0;
-    top: 2.16rem;
+    flex-shrink: 0;
 }
 .ify-bdleft span{
-    padding: 0 .5rem;
+    padding: 0 .3rem;
     font-size: .56rem;
     line-height: 2rem;
     text-align: center;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-left: 8px;
 }
 .ify-bdright{
-
+    flex-grow: 1;
+     overflow: auto;
+}
+.active{
+     /* width: 3.4rem; */
+    background-color: white; 
+    }
+.active span{
+    border-left: 5px solid #ffcc00;
+    font-weight: bolder;
 }
 .fix::after{
     display: block;
