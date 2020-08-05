@@ -12,6 +12,7 @@
 }
 html,body,#app{
   height: 100%;
+  font-size: 25px;
   overflow: hidden;
   background-color: #f2f2f2;
   color: #222;
