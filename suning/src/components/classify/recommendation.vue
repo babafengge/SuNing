@@ -119,10 +119,9 @@ export default {
 
 <style scoped>
 .compfiy-box{
-    background-color: white;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .recomtitle{
     padding: .6rem 0;
@@ -132,7 +131,7 @@ export default {
 .recomtitle span{
     color: #000;
     font-weight: bold;
-    margin-left: 0.7rem;
+    margin-left: 1rem;
 }
 .recombody{
     flex-grow: 1;
@@ -142,7 +141,7 @@ export default {
 .recomcontent{
    
     width: 2.52rem;
-    margin: 0 0.5rem .6rem 0.7rem;
+    margin: 0 0.5rem .6rem 1rem;
 
 }
 .contimg{

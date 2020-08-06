@@ -8,12 +8,12 @@
         </div>
         <div class="ify-body">
             <div class="ify-bdleft">
-                <div v-for="(item,index) in ifylist" :key="item.title" @click="ifyitembtn(index)" :class="{active:index==count}">
+                <div v-for="(item,index) in ifylist" :key="item.title" @click="ifyitembtn(index,item)" :class="{active:index==count}">
                     <span >{{item.title}}</span>
                 </div>
             </div>
             <div class="ify-bdright">
-                <recommendation></recommendation>
+                <component :is="iscpt"></component>
             </div>
         </div>
         <tabbar></tabbar>
@@ -23,60 +23,194 @@
 <script>
 import TabBar from "../components/TabBar.vue"
 import recommendation from "../components/classify/recommendation.vue"
+import phonesm from "../components/classify/phonesm.vue"
+import bighousehold from "../components/classify/bighousehold.vue"
+import computer from "../components/classify/computer.vue"
+import cookhouse from "../components/classify/cookhouse.vue"
+import savehousehold from "../components/classify/savehousehold.vue"
+import foodwater from "../components/classify/foodwater.vue"
+import peoplehl from "../components/classify/peoplehl.vue"
+import makeandskin from "../components/classify/makeandskin.vue"
+import powderedmilk from "../components/classify/powderedmilk.vue"
+import international from "../components/classify/international.vue"
+import jewellery from "../components/classify/jewellery.vue"
 
 export default {
     data(){
         return {
             ifylist:[
-                {title:"热门推荐"},
-                {title:"手机数码"},
-                {title:"大家电"},
-                {title:"电脑办公"},
-                {title:"厨卫大电"},
-                {title:"生活家电"},
-                {title:"食品酒水"},
-                {title:"个人护理"},
-                {title:"美妆护肤"},
-                {title:"奶粉尿裤"},
-                {title:"苏宁国际"},
-                {title:"珠宝首饰"},
-                {title:"品质男装"},
-                {title:"品质男鞋"},
-                {title:"流行女装"},
-                {title:"精品女鞋"},
-                {title:"运动户外"},
-                {title:"居家生活"},
-                {title:"家居家纺"},
-                {title:"家装建材"},
-                {title:"厨具水具"},
-                {title:"二手优品"},
-                {title:"苏宁生鲜"},
-                {title:"智能数码"},
-                {title:"钟表眼镜"},
-                {title:"汽车生活"},
-                {title:"童装玩具"},
-                {title:"皮具箱包"},
-                {title:"内衣配饰"},
-                {title:"图书音像"},
-                {title:"苏宁极物"},
-                {title:"苏皮士"},
-                {title:"礼品乐器"},
-                {title:"艺术陶瓷"},
-                {title:"苏宁健康"},
-                {title:"苏宁服务"},
-                {title:"苏宁乐居"}
+                {
+                    title:"热门推荐",
+                    name:"recommendation"
+                },
+                {
+                    title:"手机数码",
+                    name:"phonesm"
+                },
+                {
+                    title:"大家电",
+                    name:"bighousehold"
+                },
+                {
+                    title:"电脑办公",
+                    name:"computer"
+                },
+                {
+                    title:"厨卫大电",
+                    name:"cookhouse"
+                },
+                {
+                    title:"生活家电",
+                    name:"savehousehold"
+                },
+                {
+                    title:"食品酒水",
+                     name:"foodwater"
+                },
+                {
+                    title:"个人护理",
+                     name:"peoplehl"
+                },
+                {
+                    title:"美妆护肤",
+                     name:"makeandskin"
+                },
+                {
+                    title:"奶粉尿裤",
+                     name:"powderedmilk"
+                },
+                {
+                    title:"苏宁国际",
+                     name:"international"
+                },
+                {
+                    title:"珠宝首饰",
+                     name:"jewellery"
+                },
+                {
+                    title:"品质男装",
+                     name:"recommendation"
+                },
+                {
+                    title:"品质男鞋",
+                     name:"phonesm"
+                },
+                {
+                    title:"流行女装",
+                     name:"bighousehold"
+                },
+                {
+                    title:"精品女鞋",
+                    name:"computer"
+                },
+                {
+                    title:"运动户外",
+                    name:"cookhouse"
+                },
+                {
+                    title:"居家生活",
+                    name:"savehousehold"
+                },
+                {
+                    title:"家居家纺",
+                    name:"foodwater"
+                },
+                {
+                    title:"家装建材",
+                    name:"peoplehl"
+                },
+                {
+                    title:"厨具水具",
+                    name:"makeandskin"
+                },
+                {
+                    title:"二手优品",
+                    name:"powderedmilk"
+                },
+                {
+                    title:"苏宁生鲜",
+                    name:"international"
+                },
+                {
+                    title:"智能数码",
+                    name:"jewellery"
+                },
+                {
+                    title:"钟表眼镜",
+                    name:"recommendation"
+                },
+                {
+                    title:"汽车生活",
+                    name:"phonesm"
+                },
+                {
+                    title:"童装玩具",
+                    name:"bighousehold"
+                },
+                {
+                    title:"皮具箱包",
+                    name:"computer"
+                },
+                {
+                    title:"内衣配饰",
+                    name:"cookhouse"
+                },
+                {
+                    title:"图书音像",
+                    name:"savehousehold"
+                },
+                {
+                    title:"苏宁极物",
+                    name:"foodwater"
+                },
+                {
+                    title:"苏皮士",
+                    name:"peoplehl"
+                },
+                {
+                    title:"礼品乐器",
+                    name:"makeandskin"
+                },
+                {
+                    title:"艺术陶瓷",
+                    name:"powderedmilk"
+                },
+                {
+                    title:"苏宁健康",
+                    name:"international"
+                },
+                {
+                    title:"苏宁服务",
+                    name:"jewellery"
+                },
+                {
+                    title:"苏宁乐居",
+                    name:"recommendation"
+                }
             ],
-            count:0
+            count:0,
+            iscpt:'recommendation'
         }
     },
     components:{
         "tabbar":TabBar,
         "recommendation":recommendation,
-
+        "phonesm":phonesm,
+        "bighousehold":bighousehold,
+        "computer":computer,
+        "cookhouse":cookhouse,
+        "savehousehold":savehousehold,
+        "foodwater":foodwater,
+        "peoplehl":peoplehl,
+        "makeandskin":makeandskin,
+        "powderedmilk":powderedmilk,
+        "international":international,
+        "jewellery":jewellery
     },
     methods:{
-        ifyitembtn(index){
+        ifyitembtn(index,item){
             this.count=index;
+            this.iscpt=item.name
         }
     }
 }
@@ -143,7 +277,8 @@ height: 2.16rem;
 }
 .ify-bdright{
     flex-grow: 1;
-     overflow: auto;
+    overflow: auto;
+    background-color: white;
 }
 .active{
      /* width: 3.4rem; */
