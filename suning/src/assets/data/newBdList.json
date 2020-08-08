@@ -1,0 +1,42 @@
+{
+    "code": 200, 
+    "status": "成功", 
+    "list": [
+        {
+            "id": "01", 
+            "title": "笔记本电脑榜", 
+            "bd":"人气榜",
+            "desc": "卖爆2714件", 
+            "avatar1": "https://image.suning.cn/uimg/b2c/qrqm/0000000000000000000663608225.jpg", 
+            "avatar2": "//image.suning.cn/uimg/b2c/qrqm/0000000000000000000140393529.jpg", 
+            "url":"https://c.m.suning.com/top.html?labelType=2-1&parameter=66601&catalogueId=162019&catalogueName=精选收纳箱榜&multiDepiction=%E6%9C%AC%E5%91%A8%E8%B6%8B%E5%8A%BF%E4%B8%8A%E5%8D%87153%25&productCode=000000000140393529&productName=%E7%A6%A7%E5%A4%A9%E9%BE%99citylong58L%E5%A1%91%E6%96%99%E5%A4%A7%E5%8F%B7%E6%A0%91%E8%84%82%E6%95%B4%E7%90%86%E7%AE%B1%E6%BB%91%E8%BD%AE%E6%94%B6%E7%BA%B3%E7%AE%B1%E5%82%A8%E7%89%A9%E7%AE%B1%20%E7%B2%89%E7%BA%A2%E8%89%B2&shopCode=0000000000&supplierCode=0000000000&productType=1&promotionType=&promotionInfo=&price=49.90&picVersion=2000&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FQSJgJtz6zh4_yNW3eQdjsA.jpg&handwork=rec_21-56_21-56_none_sys:rec,inpo:0,cpn:0,p:1,ab:A,uuid:fcf97aca-09bd-4689-a0f0-d24c72d2bbf6,dab:21-43_cateid:162019,catesource:parent-city"
+        }, 
+        {
+            "id": "02", 
+            "title": "咖啡电器榜", 
+            "bd":"人气榜",
+            "desc": "卖爆776件", 
+            "avatar1": "https://image.suning.cn/uimg/b2c/qrqm/0000000000000000000854714762.jpg", 
+            "avatar2": "https://image.suning.cn/uimg/b2c/qrqm/0000000000000000000174607722.jpg",
+            "url":"https://c.m.suning.com/top.html?labelType=1&parameter=66601&catalogueId=162423&catalogueName=咖啡电器榜&multiDepiction=%E5%8D%96%E7%88%86776%E4%BB%B6&productCode=000000000174607722&productName=%E5%B0%8F%E7%86%8A%EF%BC%88Bear%EF%BC%89%E5%92%96%E5%95%A1%E6%9C%BA%20KFJ-A07V1%20%E5%AE%B6%E7%94%A8%E5%8A%9E%E5%85%AC%E5%AE%A4%E6%A1%8C%E9%9D%A2%E5%B0%8F%E5%9E%8B%E5%85%A8%E8%87%AA%E5%8A%A8%E9%AB%98%E5%AF%86%E6%BB%A4%E7%BD%91%E6%BB%B4%E6%BC%8F%E5%BC%8F%E7%BE%8E%E5%BC%8F%E5%92%96%E5%95%A1%E6%9C%BA%E5%8A%9E%E5%85%AC%E5%AE%A4%E6%B3%A1%E8%8C%B6%E5%A3%B6%E8%8B%8F%E5%AE%81%E8%87%AA%E8%90%A5&shopCode=0000000000&supplierCode=0000000000&productType=1&promotionType=&promotionInfo=&price=119.00&picVersion=2000&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2Fz6rTWuW2X56fdO5fDFYIpg.jpg&handwork=rec_21-56_21-56_none_sys:rec,inpo:0,cpn:0,p:1,ab:A,uuid:699f0dbd-4327-466c-9436-f696ffc2668b,dab:17-77_cateid:162423,catesource:parent-city"
+        }, 
+        {
+            "id": "03", 
+            "title": "回味甘醇白酒榜", 
+            "bd":"人气榜",
+            "desc": "卖爆4.0万件", 
+            "avatar1": "https://image.suning.cn/uimg/b2c/qrqm/0000000000000000000102376804.jpg", 
+            "avatar2": "https://image.suning.cn/uimg/b2c/qrqm/0000000000000000010435639390.jpg",
+            "url":"https://c.m.suning.com/top.html?labelType=1&parameter=66601&catalogueId=162121&catalogueName=回味甘醇白酒榜&multiDepiction=%E5%8D%96%E7%88%864.0%E4%B8%87%E4%BB%B6&productCode=000000010435639390&productName=%E6%B1%BE%E9%85%92%20%E9%BB%84%E7%9B%96%E7%8E%BB%E6%B1%BE%2053%E5%BA%A6%20475ml*12%E7%93%B6%20%E6%95%B4%E7%AE%B1%20%E6%B8%85%E9%A6%99%E5%9E%8B%E7%99%BD%E9%85%92&shopCode=0000000000&supplierCode=0000000000&productType=1&promotionType=12&promotionInfo=抢&price=576.00&picVersion=2000&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FJe3lMrrMADQyXG6XWNpcuQ.jpg&handwork=rec_21-56_21-56_none_sys:rec,inpo:0,cpn:0,p:1,ab:A,uuid:699f0dbd-4327-466c-9436-f696ffc2668b,dab:17-77_cateid:162121,catesource:parent-city"
+        },
+        {
+            "id": "04", 
+            "title": "厨房省力帮手榜", 
+            "bd":"人气榜",
+            "desc": "卖爆3382件", 
+            "avatar1": "//imgservice.suning.cn/uimg1/sniss/improve/5S9BAIPEmhHLwSc-0uhu7w.jpg", 
+            "avatar2": "//imgservice.suning.cn/uimg1/sniss/improve/rfAdkm5ogUUnu_aKDCWakA.jpg",
+            "url":"https://c.m.suning.com/top.html?labelType=1&parameter=66601&catalogueId=162479&catalogueName=厨房省力帮手榜&multiDepiction=%E5%8D%96%E7%88%863382%E4%BB%B6&productCode=000000000646381462&productName=%E4%B8%9C%E8%8F%B1(Donlim%EF%BC%89%E6%89%93%E8%9B%8B%E5%99%A8HM-955%E6%96%99%E7%90%86%E6%9C%BA%E5%8F%AF%E7%AB%8B%E5%BC%8F%E6%89%8B%E6%8C%81%E5%AE%B6%E7%94%A8%E7%94%B5%E5%8A%A8%E6%89%93%E5%A5%B6%E6%B2%B9%E6%9C%BA%E7%83%98%E7%84%99%E6%90%85%E6%8B%8C%E6%9C%BA%E8%BD%BB%E6%9D%BE%E6%89%93%E5%8F%91%E8%9B%8B%E7%99%BD&shopCode=0000000000&supplierCode=0000000000&productType=1&promotionType=501&promotionInfo=拼购&price=39.90&picVersion=2000&pictureUrl=%2F%2Fimgservice.suning.cn%2Fuimg1%2Fb2c%2Fimage%2FmYOaiDkLBG6c0RaR-wF4Qw.jpg&handwork=rec_21-56_21-56_none_sys:rec,inpo:0,cpn:0,p:1,ab:A,uuid:699f0dbd-4327-466c-9436-f696ffc2668b,dab:17-77_cateid:162479,catesource:parent-city"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "code": 200, 
+    "status": "成功", 
+    "list": [
+        {
+            "id": "01", 
+            "title": "天天特价", 
+            "desc": "人气好货限时抢", 
+            "avatar1": "http://localhost:5500/src/assets/home-img/bingxiang.jpg", 
+            "avatar2": "http://localhost:5500/src/assets/home-img/fengshan.jpg", 
+            "url":"https://c.m.suning.com/channel/newZsq.html?grppurId=18258141&safp=f73ee1cf.wapindex7.113457129866.2&safc=0.1.rec_1-96_1014_A&safpn=10001&",
+            "time": "2020-11-10 10:37:21",
+            "numPrice1": "¥1999",
+            "numPrice2":"¥129"
+        }, 
+        {
+            "id": "02", 
+            "title": "苏宁秒杀", 
+            "desc": "品质好货天天秒", 
+            "avatar1": "http://localhost:5500/src/assets/home-img/ziyuan.jpg", 
+            "avatar2": "http://localhost:5500/src/assets/home-img/Apple.jpg",
+            "url":"https://qiang.suning.com/greatBenefit/m/index.html?grppurId1=20545592&grppurId2=20526593&safp=f73ee1cf.wapindex7.113457129866.8&safc=0.1.rec_27-46_27-46_none_sys:rec,inpo:0,cpn:1,p:1,ab:A,uuid:0,d:1_none&safpn=10001",
+            "price-bg": "http://localhost:5500/src/assets/home-img/price-bg.png",
+            "price1": "资源",
+            "price2":"Apple"
+        }, 
+        {
+            "id": "03", 
+            "title": "百亿补贴", 
+            "desc": "奢品补贴日", 
+            "avatar1": "http://localhost:5500/src/assets/home-img/sk2.jpg", 
+            "avatar2": "http://localhost:5500/src/assets/home-img/mianmo.jpg",
+            "url":"https://cuxiao.m.suning.com/scms/bybthccopy13.html?safp=f73ee1cf.wapindex7.113460429866.2&safpn=10001",
+            "price1": "补贴价799",
+            "price2":"补贴价36/",
+            "price-bg": "http://localhost:5500/src/assets/home-img/price-bg.png"
+        },
+        {
+            "id": "04", 
+            "title": "苏宁拼购", 
+            "desc": "2人拼更实惠 全场包邮", 
+            "avatar1": "http://localhost:5500/src/assets/home-img/daoju.jpg", 
+            "avatar2": "http://localhost:5500/src/assets/home-img/yashua.jpg",
+            "url":"https://c.m.suning.com/group_index.html?adTypeCode=1164&adId=0&sourceFrom=1&sugGoodsCode=000000011780198876&sugGoodsName=%E5%88%A9%E4%BB%81%EF%BC%88Liven%EF%BC%89XDJ-1%20%E6%B6%88%E6%AF%92%E6%9C%BA&shopCode=0000000000&activeId=57718957843478088876&actType=1&cateId=&amount=1&pgPrice=239.00&memberNum=2&orign=1&handwork=rec_C0002_J0002_none_sys:rods,inpo:0,cpn:2,p:2,ab:0,uuid:b35c3ce4846e43239969a81fec03f2bb,d:1,dab:C0002_none&sourceFrom=0&sugGoodsCode2=000000011842692472&sugGoodsName2=%E9%87%91%E6%AD%A3(NiNTAUS)%E5%84%BF%E7%AB%A5%E7%94%B5%E5%8A%A8%E7%89%99%E5%88%B7JZ-R01%E7%B2%89%E8%89%B2%20%E5%85%85%E7%94%B5%E5%BC%8F%E6%97%8B%E8%BD%AC%E6%B8%85&shopCode2=0000000000&activeId2=57682074407138562472&actTyp2e=1&cateId2=&amount2=1&pgPrice2=68.00&memberNum2=2&orign2=1&handwork2=rec_C0002_J0002_none_sys:rods,inpo:0,cpn:2,p:2,ab:0,uuid:b35c3ce4846e43239969a81fec03f2bb,d:1,dab:C0002_none&sourceFrom2=0&safp=f73ee1cf.wapindex7.113460429866.5&safc=0.1.rec_C0002_J0002_none_sys:rods,inpo:0,cpn:2,p:2,ab:0,uuid:b35c3ce4846e43239969a81fec03f2bb,d:1,dab:C0002_none&safpn=10001",
+            "price1": "2人拼239",
+            "price2":"2人拼68",
+            "price-bg": "http://localhost:5500/src/assets/home-img/price-bg.png"
+        }
+    ]
+}
