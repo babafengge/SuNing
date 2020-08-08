@@ -1,28 +1,35 @@
 <template>
-<div>
-    <div class="topscoll">
-         <div v-for="(item,index) in holdlist" :key="item.title" class="scolllist"  @click="holdlistbtn(index,item.title)" :class="{holdactive:index==count}">
-            <span>{{item.title}}</span>
+<div  class="phone-cont">
+    <div class="topnav">
+        <div class="topscoll">
+            <div class="scolllist" @click="skip(1)"><span class="holdactive" ref="kt">空调</span></div>
+            <div class="scolllist" @click="skip(2)"><span ref="bx">冰箱</span></div>
+            <div class="scolllist" @click="skip(3)"><span ref="xyj">洗衣机</span></div>
+            <div class="scolllist" @click="skip(4)"><span ref="ds">电视</span></div>
+            <div class="scolllist" @click="skip(5)"><span ref="jcjd">集成家电</span></div>
+            <div class="scolllist" @click="skip(6)"><span ref="sydq">商用电器</span></div>
+            <div class="scolllist" @click="skip(7)"><span ref="tjpp">推荐品牌</span></div>
         </div>
     </div>
-    <div class="compfiy-box" v-for="item in holdlist" :key="item.title">
-        <div class="recomtitle">
-           <span>{{item.title}}</span>
-        </div>
-        <div class="recombody">
-            <div v-for="cont in item.holdcontlist" :key="cont.text" class="recomcontent">
-                <div class="contimg">
-                    <img :src="cont.img" alt="图片加载失败" >
+    <div class="middle" @scroll="midscrol" ref="midd">
+        <div class="compfiy-box" :ref="index" v-for="(item,index) in holdlist" :key="item.title" :id="item.id" >
+            <div class="recomtitle">
+            <span>{{item.title}}</span>
+            </div>
+            <div class="recombody" >
+                <div v-for="cont in item.holdcontlist" :key="cont.text" class="recomcontent">
+                    <div class="contimg">
+                        <img :src="cont.img" alt="图片加载失败" >
+                    </div>
+                    <div class="recomtxt">{{cont.text}}</div>
                 </div>
-                <div class="recomtxt">{{cont.text}}</div>
             </div>
         </div>
-    </div>
-    <div class="lastcont">
-        <a>进入家电频道</a>
+        <div class="lastcont">
+            <a>进入家电频道</a>
+        </div>
     </div>
 </div>
-    
 </template>
 
 <script>
@@ -32,6 +39,7 @@ export default {
             holdlist:[
                 {
                     title:"空调",
+                    id:"skipid1",
                     holdcontlist:[
                         {
                             img:require("../../assets/flyimg/rmtj-kt.jpg"),
@@ -73,6 +81,7 @@ export default {
                 },
                 {
                     title:"冰箱",
+                    id:"skipid2",
                     holdcontlist:[
                         {
                             img:require("../../assets/flyimg/rmtj-bx.jpg"),
@@ -114,6 +123,7 @@ export default {
                 },
                 {
                     title:"洗衣机",
+                    id:"skipid3",
                     holdcontlist:[
                         {
                             img:require("../../assets/flyimg/xyj-xhytj.jpg"),
@@ -143,6 +153,7 @@ export default {
                 },
                 {
                     title:"电视",
+                    id:"skipid4",
                     holdcontlist:[
                         {
                             img:require("../../assets/flyimg/ds-ds.jpg"),
@@ -184,6 +195,7 @@ export default {
                 },
                 {
                     title:"集成家电",
+                    id:"skipid5",
                     holdcontlist:[
                         {
                             img:require("../../assets/flyimg/jcjd-bgsxf.jpg"),
@@ -213,6 +225,7 @@ export default {
                 },
                 {
                     title:"商用电器",
+                    id:"skipid6",
                     holdcontlist:[
                         {
                             img:require("../../assets/flyimg/sydq-syfjj.jpg"),
@@ -242,6 +255,7 @@ export default {
                 },
                 {
                     title:"推荐品牌",
+                    id:"skipid7",
                     holdcontlist:[
                         {
                             img:require("../../assets/flyimg/tjpp-md.jpg"),
@@ -282,21 +296,72 @@ export default {
                     ]
                 }
             ],
-            count:0,
-            title:""
+            scollTop:null,
         }
     },
     methods:{
-        holdlistbtn(index,val){
-            this.count=index;
-            this.title=val;
-            console.log(this.title)
+        midscrol(event){
+            this.scrollTop = event.target.scrollTop;
+            console.log(this.scrollTop);
+            if(this.scrollTop<330){
+                this.$refs.kt.classList.add("holdactive")
+            }else{
+                this.$refs.kt.classList.remove("holdactive")
+            }
+
+            if(this.scrollTop>330 && this.scrollTop<670){
+                this.$refs.bx.classList.add("holdactive")
+            }else{
+                this.$refs.bx.classList.remove("holdactive")
+            }
+
+            if(this.scrollTop>670&&this.scrollTop<900){
+                this.$refs.xyj.classList.add("holdactive")
+            }else{
+                this.$refs.xyj.classList.remove("holdactive")
+            }
+
+            if(this.scrollTop>900&&this.scrollTop<1200){
+                this.$refs.ds.classList.add("holdactive")
+            }else{
+                this.$refs.ds.classList.remove("holdactive")
+            }
+
+            if(this.scrollTop>1200&&this.scrollTop<1480){
+                this.$refs.jcjd.classList.add("holdactive")
+            }else{
+                this.$refs.jcjd.classList.remove("holdactive")
+            }
+
+            if(this.scrollTop>1480 &&this.scrollTop<1580){
+                this.$refs.sydq.classList.add("holdactive")
+            }else{
+                this.$refs.sydq.classList.remove("holdactive")
+            }
+
+            if(this.scrollTop>1580){
+                this.$refs.tjpp.classList.add("holdactive")
+            }else{
+                this.$refs.tjpp.classList.remove("holdactive")
+            }
+        },
+        skip(key){
+            var pad = document.querySelector("#skipid"+key);
+            this.$refs.midd.scrollTop=pad.offsetTop-115
         }
     }
 }
 </script>
 
 <style scoped>
+.phone-cont{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.topnav{
+    margin:0.6rem 0 0 1rem;
+}
 .topscoll{
     display: flex;
     flex-wrap: nowrap;
@@ -304,17 +369,17 @@ export default {
 }
 .scolllist{
     flex-shrink: 0;
-    margin: 0 10px;
+    margin:0 .5rem .3rem 0;
 }
 .topscoll span{
     font-size: .48rem;
     line-height: .48rem;
     white-space: nowrap;
+    padding-bottom: .3rem;
 }
-.compfiy-box{
-    display: flex;
-    flex-direction: column;
-    /* overflow: hidden; */
+.middle{
+    flex-grow: 1;
+    overflow: auto;
 }
 .recomtitle{
     padding: .6rem 0;
@@ -364,7 +429,7 @@ export default {
     color: #222;
     line-height: 1.32rem;
 }
-.holdactive span{
+.holdactive{
     border-bottom: 3px solid #ffcc00;
     font-weight: bolder;
 }
