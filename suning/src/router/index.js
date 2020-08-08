@@ -33,7 +33,7 @@ const routes = [{
   {
     path: '/shopCar',
     component: ShopCar
-  },
+  }
 ]
 
 const originalPush = VueRouter.prototype.push
