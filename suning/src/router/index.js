@@ -11,39 +11,43 @@ import ShopCar from '../views/ShopCar.vue'
 Vue.use(VueRouter)
 
 const routes = [{
-    path: '/',
-    component: Home
-  },
-  {
-    path: '/classify',
-    component: Classify
-  },
-  {
-    path: '/detail',
-    component: Detail
-  },
-  {
-    path: '/my',
-    component: My
-  },
-  {
-    path: '/search',
-    component: Search
-  },
-  {
-    path: '/shopCar',
-    component: ShopCar
-  }
+        path: '/',
+        component: Home
+    },
+    {
+        path: '/classify',
+        component: Classify
+    },
+    {
+        path: '/detail',
+        component: Detail
+    },
+    {
+        path: '/my',
+        component: My
+    },
+    {
+        path: '/search',
+        component: Search
+    },
+    {
+        path: '/shopCar',
+        component: ShopCar
+    },
+    {
+        path: "/my",
+        component: My
+    }
 ]
 
 const originalPush = VueRouter.prototype.push
 
 VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
+    return originalPush.call(this, location).catch(err => err)
 }
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router

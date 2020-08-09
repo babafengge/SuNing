@@ -127,7 +127,7 @@ export default {
 
 .img-content-wrap p {
   text-align: center;
-  background: url(../assets/home-img/price-bg.png);
+  background: url(../../assets/home-img/price-bg.png);
   background-size: 2.5rem 1.08rem;
   background-position: 0px -8px;
   background-repeat: no-repeat;
