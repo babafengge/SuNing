@@ -299,7 +299,7 @@ export default {
       ],
       isShow: false,
       scroll: null,
-      isDel:true
+      isDel:true,
     };
   },
 
@@ -321,6 +321,12 @@ export default {
         that.isShow = true;
       } else {
         that.isShow = false;
+      };
+
+      if(-position.y >7780){
+        that.isDel = false
+      }else{
+        that.isDel = true
       }
     });
     // 返回顶部
@@ -355,7 +361,7 @@ export default {
     FourContent,
     FourBd,
     Ulike,
-    MaskLoad,
+    MaskLoad
   },
 };
 </script>

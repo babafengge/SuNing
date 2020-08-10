@@ -48,11 +48,11 @@ export default {
 }
 
 .animate-enter-active {
-  animation: animate 0.1s;
+  animation: animate 0.05s;
 }
 
 .animate-leave-active {
-  animation: animate 0.1s reverse;
+  animation: animate 0.05s reverse;
 }
 
 .mask-wrap {
