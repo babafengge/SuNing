@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/swiper-bundle.css'
+import Swiper, { Navigation, Pagination, Autoplay} from "swiper";
 import router from './router'
 import store from './store'
+Swiper.use([Navigation, Pagination,Autoplay]);
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
-import VueAwesomeSwiper from 'vue-awesome-swiper';
-import 'swiper/swiper-bundle.css';
-import Swiper, { Navigation, Pagination, Autoplay} from "swiper";
-Swiper.use([Navigation, Pagination,Autoplay]);
-Vue.use(VueAwesomeSwiper, /* { default options with global component } */)
+
 new Vue({
   router,
   store,

@@ -1,0 +1,53 @@
+{
+    "code": 200, 
+    "status": "成功", 
+    "list": [
+        {   "id":"1",
+            "proImg":"http://localhost:5500/src/assets/home-img/tuoxie.jpg",
+            "desc":"苏宁极物 轻弹居家拖鞋凉拖浴室防滑纯色eva软底情侣 玫瑰灰粉 240MM（适合37-38码）",
+            "proIcon":"自营",
+            "price":"14.90",
+            "adv":"广告"
+        },
+        {
+            "proImg":"//imgservice.suning.cn/uimg1/b2c/image/hZFpJhfKylFlwAmqc69nyQ.jpg",
+            "desc":"【C罗同款】清扬男士去屑洗发露清爽控油型蓝瓶 洗发水720g",
+            "price":"55.9",
+            "url":"//m.suning.com/product/0071161489/000000010912149674.html"
+        },
+        {
+            "proImg":"//imgservice.suning.cn/uimg1/b2c/image/dc0vp7bkpFVa1vpzNMmJGg.jpg",
+            "desc":"飞天53%vol 500ml 贵州茅台酒（带杯）2020年产 新老包装发货 酱香型白酒",
+            "proIcon":"自营",
+            "price":"1499",
+            "evaluate":"37万+评价",
+            "url":"//m.suning.com/product/0000000000/000000011001203841.html"
+        },
+        {
+            "proImg":"//imgservice.suning.cn/uimg1/b2c/image/6_rNWjrsbMCFn4hEiETmlQ.jpg",
+            "desc":"苏宁极物 乳胶枕头泰国天然乳胶曲线波浪护颈家用睡眠枕头",
+            "jiwu":"苏宁极物",
+            "pingou":"拼购",
+            "price":"89",
+            "evaluate":"2.4万+评价",
+            "url":"//m.suning.com/product/0000000000/000000010221778602.html"
+        },{
+            "proImg":"//imgservice.suning.cn/uimg1/b2c/image/K4NSGlWYv7E9ZJIRMsPxEA.jpg",
+            "desc":"(效期2020.12月~21.1月)【舒缓疲劳，男士专属】Centrum 善存 男士复合维生素 120粒/瓶 美国进口",
+            "inter":"苏宁国际直营",
+            "pingou":"拼购",
+            "price":"64",
+            "evaluate":"2200+评价",
+            "url":"https://th.suning.com/cpc/syt/clickInfo?companyCode=70159947&adtype=1&clickUrl=http%3A%2F%2Fproduct.suning.com%2F0000000000%2F101355174.html&s=wap&cpcTranInfoStr=4zu0aiuiXOeRBD-CThjxMwBMbJqXyUp06Jl1iEzHkSFQv4CZ1779lN5SEavCnvYVE9oxacLunm0ojgJYOaJ8plDeXrifOnfHikaasWnaQK3Wbycamn7nJNBgqeZeZwMo7bohfyhiV5CAbhOXrGdeCw&click_id=axqdM480baaOCVhD1000000000my8QSRgPIN2eMH8&k=9avBtSZmUggj-DgL2BhK7g0ti7cj73OBH3HjDY5O1kekb7koR8VmuwvLalbOH-oI_BDhqvPioXclrHYy0vXJ5jQ6V4WbWVT7ym8j-pjYaJ1GmCNmMx0rIOUnHHiJnCC7GNQJ0e7w6k_0REeKdVVWVYS-p3ThWOnNDWQCEFXbE7sChcZJLFozzwv6HpiMIWBjL1PnyC4Ak0DtfsFreG7E0myiliQtHRXM-TPRWR83czQUgSzRPWTIKtDDCZIlJyr0T8r_wXuk3SBYutsl9-4td-KwMOf5p41JLhfm5CsblFeWNZweMaqJWHG2_ijRNYNQjHTdEmIEC5lhfCn5U_t9kBPQm4LtvJwue_AVtd5O6Yr7bdupljsqX8YvEi0ra009DN5mDZxXLte6k8YdGGIQ0mH75ees_sum8GPJa2aXsTaD5FLV0HdeQcKFmNBTNwSwSVDZc0AbTocHm-Z89C1O-7T3UPqMsO1Q3sp9wc1l1CM&cmdCode=101355174&tid=102687701970000004320200808&sid=16268985"
+        },
+        {
+            "proImg":"//imgservice.suning.cn/uimg1/b2c/atmosphere/cckZ9KXKdqOvS80hYMo_rg.jpg",
+            "desc":"澳柯玛(AUCMA) 家用40升2000W电热水器40D22 速热高温杀毒抑菌 安全防电闸",
+            "proIcon":"自营",
+            "pingou":"拼购",
+            "price":"439",
+            "evaluate":"9500+评价",
+            "url":"//m.suning.com/product/0000000000/000000000683683938.html"
+        }
+    ]
+}
