@@ -7,11 +7,11 @@
 <script>
 export default {
   created() {
-    (function(doc, win) {
+    (function (doc, win) {
       var docEl = doc.documentElement,
         resizeEvt =
           "orientationchange" in window ? "orientationchange" : "resize",
-        recalc = function() {
+        recalc = function () {
           var clientWidth = docEl.clientWidth;
           if (!clientWidth) return;
           docEl.style.fontSize = 20 * (clientWidth / 320) + "px";
@@ -20,7 +20,7 @@ export default {
       win.addEventListener(resizeEvt, recalc, false);
       doc.addEventListener("DOMContentLoaded", recalc, false);
     })(document, window);
-  }
+  },
 };
 </script>
 
@@ -30,18 +30,14 @@ export default {
   margin: 0;
   box-sizing: border-box;
 }
-
-@media only screen and (min-width: 320px) {
-  html,
-  body,
-  #app {
-    height: 100%;
-    overflow: hidden;
-    background-color: #f2f2f2;
-    color: #222;
-  }
+html,
+body,
+#app {
+  height: 100%;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  color: #222;
 }
-
 a {
   text-decoration: none;
   color: #222;
