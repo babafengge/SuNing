@@ -8,7 +8,7 @@
           <p class="three-name">{{item.firstText}}</p>
           <p>{{item.secText}}</p>
           <p>{{item.thirdText}}</p>
-          <img class="bottom-bg" src="../assets/home-img/bottom-bg2.png" />
+          <img class="bottom-bg" src="../../assets/home-img/bottom-bg2.png" />
         </a>
       </swiper-slide>
     </swiper>
@@ -26,7 +26,7 @@ export default {
           firstText: "人气榜",
           secText: "甄选回香红酒榜",
           thirdText: "卖爆1.8万件",
-          imgUrl: require("../assets/home-img/coco.jpg")
+          imgUrl: require("../../assets/home-img/coco.jpg")
         },
         {
           url:
@@ -34,7 +34,7 @@ export default {
           firstText: "人气榜",
           secText: "清洁洗发水榜",
           thirdText: "卖爆1.8万件",
-          imgUrl: require("../assets/home-img/qingyang.jpg")
+          imgUrl: require("../../assets/home-img/qingyang.jpg")
         },
         {
           url:
@@ -42,7 +42,7 @@ export default {
           firstText: "人气榜",
           secText: "电脑DIY配件榜",
           thirdText: "卖爆1.8万件",
-          imgUrl: require("../assets/home-img/neicuntiao.jpg")
+          imgUrl: require("../../assets/home-img/neicuntiao.jpg")
         }
       ],
       swiperOptions: {
@@ -61,7 +61,7 @@ export default {
 <style scoped>
 .swiper-container {
   height: 100%;
-  width: 94%;
+  width: 100%;
   /* border-radius: 8px; */
 }
 

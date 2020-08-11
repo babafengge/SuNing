@@ -28,6 +28,21 @@
         >搜索</a>
       </div>
     </div>
+
+    <!-- 热门搜索 -->
+    <div class="hot-search-wrap">
+      <h2>热门搜索</h2>
+      <div class="hot-search">
+        <a
+          :href="item.listUrl"
+          v-for="(item,index) in hotList"
+          :key="item.content"
+          ref="changeColor"
+        >
+          <span :class="{isActive:item.highlight}">{{item.content}}</span>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -36,7 +51,74 @@ export default {
   data() {
     return {
       inputValue: "请输入你想要的找的商品",
-      blurValue: "限时抢9.9元榨汁机"
+      blurValue: "限时抢9.9元榨汁机",
+      hotList: [
+        {
+          listUrl:
+            "http://th.suning.com/cpm/calCpmClick?adtype=3&sid=17063231&tid=1706323120200810&click_id=MeYxME80Bp7GIDgy37oWm4f1EA&ap=ODE1ZThkYzg0MDcyMmMzYzdiMmIzY2Q4NzNlOGVhODR8MTAwMDAzNTgzfDE3MDYzMjMxMjAyMDA4MTB8MTcwNjMyMzF8aHR0cHM6Ly9zaG9wLm0uc3VuaW5nLmNvbS9zYWxlLzMwMDAwMDIzXzEwMTE5NDcwLmh0bWx8Y3BtfDIwMjAtMDgtMTAgMDk6MTQ6NDh8MTU5NzAyMjA4ODc2Mjc4NzYxMjJ8MTIyLjk3LjE5Ny4zMXwwfGh0dHBzOi8vbS5zdW5pbmcuY29tL3NlYXJjaC5odG1sfDQyOTAyNDA4NnwxNTk2NTA4OTgzOTE5ODc4ODd8MzAwODYzMzl8OXwxMDB8MTAuMTA2LjEzLjM4fDF8MXx3YXB8NjIyODg1Mjc2MHxkZDgyMTc3MGE3NWRkNGU2ZDFlYjNkZjMyYTBlOGE2N3x8MTAwMDAzNTgzfHx8fHx85pa55aSq54iG5qy%2B56eS5p2AfG51bGx8&clickUrl=https%3A%2F%2Fshop.m.suning.com%2Fsale%2F30000023_10119470.html%3Fadtype%3D3",
+          content: "空调扇",
+          highlight: false
+        },
+        {
+          listUrl:
+            "https://shop.m.suning.com/30002894.html?adtype=3&safp=f73ee1cf.21471.searchKeywordsborb.2&safc=hotkeyword.2.1706747220200809",
+          content: "一加手机",
+          highlight: true
+        },
+        {
+          listUrl:
+            "https://cuxiao.m.suning.com/scms/809WPPK.html?adtype=3&safp=f73ee1cf.21471.searchKeywordsborb.3&safc=hotkeyword.2.1707392020200809",
+          content: "全场五折起",
+          highlight: true
+        },
+        {
+          listUrl: "https://m.suning.com/search/%E8%BF%90%E5%8A%A8%E9%9E%8B/",
+          content: "运动鞋",
+          highlight: false
+        },
+        {
+          listUrl: "http://fe.suning.com/recycling/m/index.html",
+          content: "二手优品",
+          highlight: false
+        },
+        {
+          listUrl:
+            "https://cuxiao.m.suning.com/scms/jzjccp.html?adtype=3&safp=f73ee1cf.21471.searchKeywordsborb.6&safc=hotkeyword.2.1706758320200809",
+          content: "家装5折枪",
+          highlight: true
+        },
+        {
+          listUrl: "http://fe.suning.com/recycling/m/index.html",
+          content: "学习机赢奖金",
+          highlight: true
+        },
+        {
+          listUrl: "http://fe.suning.com/recycling/m/index.html",
+          content: "手机",
+          highlight: false
+        },
+        {
+          listUrl: "http://fe.suning.com/recycling/m/index.html",
+          content: "冰箱",
+          highlight: false
+        },
+        {
+          listUrl: "http://fe.suning.com/recycling/m/index.html",
+          content: "电视",
+          highlight: false
+        },
+        {
+          listUrl: "http://fe.suning.com/recycling/m/index.html",
+          content: "茅台",
+          highlight: false
+        },
+        {
+          listUrl: "http://fe.suning.com/recycling/m/index.html",
+          content: "笔记本",
+          highlight: false
+        }
+      ],
+      historyList: []
     };
   },
   methods: {
@@ -67,6 +149,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgb(226, 226, 226);
 }
 
 .icon-wrap {
@@ -95,8 +178,8 @@ form {
   background: url(../assets/home-img/magnifier-icon.png);
   width: 0.72rem;
   height: 0.72rem;
-  top: 0.5rem;
-  left: 1.8rem;
+  top: 0.45rem;
+  left: 2rem;
   background-size: 0.72rem 0.72rem;
   position: absolute;
   margin-left: 0.3rem;
@@ -115,5 +198,51 @@ form > input {
   color: #999;
   outline: none;
   background-color: rgb(238, 238, 238);
+}
+
+.hot-search-wrap {
+  width: 92%;
+  height: 8rem;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hot-search-wrap h2 {
+  margin-left: 0.1rem;
+  line-height: 0.96rem;
+  height: 0.96rem;
+  color: #999;
+  font-size: 0.6rem;
+  font-weight: 100;
+}
+
+.hot-search {
+  margin-top: 0.2rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.hot-search a {
+  display: inline-block;
+  width: 31.5%;
+  height: 1.3rem;
+  text-align: center;
+  background: #f2f2f2;
+  font-size: 0.53rem;
+  line-height: 1.3rem;
+  border-radius: 4px;
+  word-break: keep-all;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.isActive {
+  color: #ff6600;
 }
 </style>

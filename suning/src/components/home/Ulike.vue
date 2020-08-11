@@ -1,7 +1,7 @@
 <template>
   <div class="like-pro-container">
     <a :href="item.url" v-for="item in proList" :key="item.desc">
-      <div class="pro-item">
+      <div class="pro-item" @click="goDetail(item.id)">
         <div class="item-img">
           <img :src="item.proImg" />
         </div>
@@ -53,6 +53,18 @@ export default {
       .catch(function(error) {
         console.log(error);
       });
+  },
+  methods:{
+    goDetail(id){
+      if(id){
+        this.$router.push({
+          path:"/detail",
+          query:{
+            id:id
+          }
+        })
+      }
+    }
   }
 };
 </script>

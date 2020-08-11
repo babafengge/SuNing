@@ -1,5 +1,7 @@
 <template>
   <div class="home-container">
+    <!-- 遮罩层 -->
+    <mask-load></mask-load>
     <!-- 主体外框 -->
     <div class="main-container" ref="mainScroll">
       <!-- 顶部 -->
@@ -229,68 +231,75 @@
       </a>
     </div>
 
+    <!-- 跳转到登录组件 -->
+    <div class="to-login" @click="jumpLogin" v-if='isDel'>
+      <img src="https://image3.suning.cn/uimg/cms/img/157588645542963955.png" />
+    </div>
+
     <tab-bar></tab-bar>
   </div>
 </template>
 
 <script>
 import TabBar from "../components/TabBar.vue";
-import loop from "../components/Loop.vue";
+import loop from "../components/home/Loop.vue";
 import BScroll from "better-scroll";
-import VerticalLooper from "../components/VerticalLooper.vue";
-import FourContent from "../components/Four-Content.vue";
-import FourBd from "../components/FourBd.vue";
-import Ulike from "../components/Ulike.vue";
-import Search from './Search.vue'
+import VerticalLooper from "../components/home/VerticalLooper.vue";
+import FourContent from "../components/home/Four-Content.vue";
+import FourBd from "../components/home/FourBd.vue";
+import Ulike from "../components/home/Ulike.vue";
+import MaskLoad from "../components/home/MaskLoad.vue";
+import Search from "./Search.vue";
 export default {
   data() {
     return {
       enterList1: [
         {
           icon: require("../assets/home-img/low-price.png"),
-          title: "天天低价"
+          title: "天天低价",
         },
         {
           icon: require("../assets/home-img/sn-market.png"),
-          title: "苏宁超市"
+          title: "苏宁超市",
         },
         {
           icon: require("../assets/home-img/sn-pingou.png"),
-          title: "苏宁拼购"
+          title: "苏宁拼购",
         },
         {
           icon: require("../assets/home-img/5G-phone.png"),
-          title: "5G手机"
+          title: "5G手机",
         },
         {
           icon: require("../assets/home-img/sn-jiadian.png"),
-          title: "苏宁家电"
-        }
+          title: "苏宁家电",
+        },
       ],
       enterList2: [
         {
           icon: require("../assets/home-img/free-fruit.png"),
-          title: "免费水果"
+          title: "免费水果",
         },
         {
           icon: require("../assets/home-img/xiaoxiaole.png"),
-          title: "赚钱消消乐"
+          title: "赚钱消消乐",
         },
         {
           icon: require("../assets/home-img/youli.png"),
-          title: "签到有礼"
+          title: "签到有礼",
         },
         {
           icon: require("../assets/home-img/linquan.png"),
-          title: "领券中心"
+          title: "领券中心",
         },
         {
           icon: require("../assets/home-img/more-channel.png"),
-          title: "更多频道"
-        }
+          title: "更多频道",
+        },
       ],
       isShow: false,
-      scroll: null
+      scroll: null,
+      isDel:true,
     };
   },
 
@@ -300,18 +309,24 @@ export default {
       mouseWheel: {
         // pc端同样能滑动
         speed: 20,
-        invert: false
+        invert: false,
       },
       probeType: 3,
-      click: true
+      click: true,
     });
 
-    this.scroll.on("scroll", function(position) {
+    this.scroll.on("scroll", function (position) {
       // console.log(position);
       if (-position.y > 300) {
         that.isShow = true;
       } else {
         that.isShow = false;
+      };
+
+      if(-position.y >7780){
+        that.isDel = false
+      }else{
+        that.isDel = true
       }
     });
     // 返回顶部
@@ -320,17 +335,23 @@ export default {
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper;
-    }
+    },
   },
   methods: {
     jumpSearch() {
       this.$router.push({
-        path: "/search"
+        path: "/search",
       });
     },
     backTop() {
       // 返回顶部
       this.scroll.scrollTo(0, 0, 500);
+    },
+    jumpLogin(){
+      this.$router.push({
+        path:"/my"
+      });
+      this.isDel = !this.isDel;
     }
   },
   components: {
@@ -339,8 +360,9 @@ export default {
     VerticalLooper,
     FourContent,
     FourBd,
-    Ulike
-  }
+    Ulike,
+    MaskLoad
+  },
 };
 </script>
 
@@ -424,7 +446,7 @@ export default {
   background-size: 0.72rem 0.72rem;
 }
 .search-bar {
-  width: 96%;
+  width: 92%;
   height: 1.3rem;
   position: relative;
   line-height: 1.3rem;
@@ -491,6 +513,7 @@ form > input {
 .enter-list-wrap2 {
   width: 100%;
   display: flex;
+  overflow: hidden;
   justify-content: center;
 }
 
@@ -762,6 +785,17 @@ form > input {
 
 .bottom-img img {
   width: 100%;
+}
+
+/* 跳转至登录页面 */
+.to-login {
+  width: 100%;
+  height: 1.8rem;
+}
+
+.to-login img {
+  width: 100%;
+  height: 100%;
 }
 </style>
 

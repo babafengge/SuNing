@@ -35,14 +35,6 @@ const routes = [{
   {
     path: '/shopCar',
     component: ShopCar
-  },
-  {
-    path: '/regist',
-    component: regist
-  },
-  {
-    path: '/enroll',
-    component: enroll
   }
 ]
 

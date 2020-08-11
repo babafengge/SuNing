@@ -1,9 +1,10 @@
 <template>
     <div class="tab-bar-container">
         <div class="tab-bar-item" @click="btnClick('')">
-            <div v-if="page=='/'"><img src="../assets/tabbar/tab-bar-home-active.png"></div>
+            <div v-if="page=='/'"><img src="../assets/tabbar/heart.png"></div>
             <div v-else><img src="../assets/tabbar/tab-bar-home.png"></div>
-            <div :class="{'tab-bar-active':page=='/'}">首页</div>
+            <div :class="{'tab-bar-active':page=='/'}" v-if="page=='/'">猜你喜欢</div>
+            <div :class="{'tab-bar-active':page=='/'}" v-else>首页</div>
         </div>
         <div class="tab-bar-item" @click="btnClick('classify')">
             <div v-if="page=='/classify'"><img src="../assets/tabbar/magnifier-active.png"></div>
@@ -52,7 +53,8 @@ export default {
     justify-content: space-around;
     border-top: 1px solid #EEE;
     background: #fff;
-    height: 50px;
+    height: 2rem;
+    flex-shrink: 0;
 }
 .tab-bar-item{
     flex-grow: 1;
@@ -60,7 +62,7 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
+    font-size: 0.4rem;
     color: #666;
 }
 .tab-bar-item a{
@@ -70,7 +72,7 @@ export default {
     color: #666;
 }
 .tab-bar-item img{
-    width: 24px;
+    width: 0.96rem;
 }
 .tab-bar-active{
     color:#000;
