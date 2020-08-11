@@ -144,7 +144,9 @@
         </div>
       </div>
       <div class="end"></div>
-      <div class="fixicon"></div>
+      <div class="fixicon">
+        <a href="https://qss.suning.com/604fc.htm"></a>
+      </div>
     </div>
     <tabbar></tabbar>
   </div>
@@ -489,5 +491,10 @@ h5 {
     right: .6rem;
     background: url("../../assets/myimg/question-icon.png") no-repeat;
     background-size: 1.56rem 1.56rem;
+}
+.fixicon a{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 </style>

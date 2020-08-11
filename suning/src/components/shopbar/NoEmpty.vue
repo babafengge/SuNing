@@ -1,6 +1,6 @@
 <template>
     <div class="body">
-        <div class="login">
+        <div class="login" v-if="login">
             <p>登录后同步电脑与手机购物车的商品</p>
             <span @click="$router.push({path:'/my'})">去登录</span>
         </div>
@@ -110,6 +110,9 @@
 <script>
 export default {
     computed:{
+        login(){
+            return this.$store.state.login
+        },
         suzy(){
             return this.$store.state.suzy;
         },

@@ -34,164 +34,30 @@ import makeandskin from "../components/classify/makeandskin.vue"
 import powderedmilk from "../components/classify/powderedmilk.vue"
 import international from "../components/classify/international.vue"
 import jewellery from "../components/classify/jewellery.vue"
+import axios from "axios"
 
 export default {
     data(){
         return {
-            ifylist:[
-                {
-                    title:"热门推荐",
-                    name:"recommendation"
-                },
-                {
-                    title:"手机数码",
-                    name:"phonesm"
-                },
-                {
-                    title:"大家电",
-                    name:"bighousehold"
-                },
-                {
-                    title:"电脑办公",
-                    name:"computer"
-                },
-                {
-                    title:"厨卫大电",
-                    name:"cookhouse"
-                },
-                {
-                    title:"生活家电",
-                    name:"savehousehold"
-                },
-                {
-                    title:"食品酒水",
-                     name:"foodwater"
-                },
-                {
-                    title:"个人护理",
-                     name:"peoplehl"
-                },
-                {
-                    title:"美妆护肤",
-                     name:"makeandskin"
-                },
-                {
-                    title:"奶粉尿裤",
-                     name:"powderedmilk"
-                },
-                {
-                    title:"苏宁国际",
-                     name:"international"
-                },
-                {
-                    title:"珠宝首饰",
-                     name:"jewellery"
-                },
-                {
-                    title:"品质男装",
-                     name:"recommendation"
-                },
-                {
-                    title:"品质男鞋",
-                     name:"phonesm"
-                },
-                {
-                    title:"流行女装",
-                     name:"bighousehold"
-                },
-                {
-                    title:"精品女鞋",
-                    name:"computer"
-                },
-                {
-                    title:"运动户外",
-                    name:"cookhouse"
-                },
-                {
-                    title:"居家生活",
-                    name:"savehousehold"
-                },
-                {
-                    title:"家居家纺",
-                    name:"foodwater"
-                },
-                {
-                    title:"家装建材",
-                    name:"peoplehl"
-                },
-                {
-                    title:"厨具水具",
-                    name:"makeandskin"
-                },
-                {
-                    title:"二手优品",
-                    name:"powderedmilk"
-                },
-                {
-                    title:"苏宁生鲜",
-                    name:"international"
-                },
-                {
-                    title:"智能数码",
-                    name:"jewellery"
-                },
-                {
-                    title:"钟表眼镜",
-                    name:"recommendation"
-                },
-                {
-                    title:"汽车生活",
-                    name:"phonesm"
-                },
-                {
-                    title:"童装玩具",
-                    name:"bighousehold"
-                },
-                {
-                    title:"皮具箱包",
-                    name:"computer"
-                },
-                {
-                    title:"内衣配饰",
-                    name:"cookhouse"
-                },
-                {
-                    title:"图书音像",
-                    name:"savehousehold"
-                },
-                {
-                    title:"苏宁极物",
-                    name:"foodwater"
-                },
-                {
-                    title:"苏皮士",
-                    name:"peoplehl"
-                },
-                {
-                    title:"礼品乐器",
-                    name:"makeandskin"
-                },
-                {
-                    title:"艺术陶瓷",
-                    name:"powderedmilk"
-                },
-                {
-                    title:"苏宁健康",
-                    name:"international"
-                },
-                {
-                    title:"苏宁服务",
-                    name:"jewellery"
-                },
-                {
-                    title:"苏宁乐居",
-                    name:"recommendation"
-                }
-            ],
+            ifylist:[],
             count:0,
             iscpt:'recommendation'
         }
     },
+  created() {
+    let url = "http://localhost:5500/src/components/data/Classify.json";
+    let that = this;
+    axios
+      .get(url)
+      .then(function(response) {
+        if (response.data.code == 200) {
+          that.ifylist = response.data.ifylist;
+        }
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  },
     components:{
         "tabbar":TabBar,
         "recommendation":recommendation,
@@ -216,7 +82,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .ify-box{
     width: 100%;
     height: 100%;
