@@ -1,0 +1,104 @@
+{
+    "code":200,
+    "status":"成功",
+    "list":[
+        {
+            "shop":"su-jiwu",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/pB--2Ctq1HdHD5POIxWg0A.jpg_200w_200h_4e",
+            "price":"14.90",
+            "text":"苏宁极物 轻弹居家拖鞋凉拖浴室防滑纯色eva软底情侣 玫瑰灰粉 240MM（适合37-38码）",
+            "id":1
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/MbqYM_VzT0kyLFOnubLucw.png_200w_200h_4e",
+            "price":"39.80",
+            "text":"德国拜耳杀虫剂喷雾 除敌5ml*4 家用驱蚊子蟑螂药除跳蚤苍蝇臭虫杀虫气雾剂"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/image/-wqYQedReF6kd37t06IbYg.jpg_200w_200h_4e",
+            "price":"27.80",
+            "text":"威猛先生 厨房重油污净 455g双包装 清新柑橘 除菌 油污净 强效去油污 油烟机 油污清洁剂 【新老包装随机发货】"
+        },
+        {
+            "shop":"su-hwg",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/LOiSyFpP7_F-vv9WboogwQ.jpg_200w_200h_4e",
+            "price":"268.00",
+            "text":"【法国本土版】LANCOME 兰蔻 大粉水 清滢保湿 爽肤水 400ml/瓶 干皮亲妈 滋润营养"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/image/RFr03XkkqZZrxmR_c8tA-w.jpg_200w_200h_4e",
+            "price":"10.90",
+            "text":"好逮 家用蟑螂贴 蟑螂屋含引诱剂 蟑螂捕诱器 5片/盒"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/mnZZn7xBUA1Ywh_BLux0zA.jpg_200w_200h_4e",
+            "price":"45.90",
+            "text":"农夫山泉天然饮用水5L*4 整箱装"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/rdM6J6tXBeiBxVOTtm4CoA.jpg_200w_200h_4e",
+            "price":"199.00",
+            "text":"康佳(KONKA)电磁炉KG-1901 家用圆形触控2100W大功率黑晶面板 匀火爆炒多档火力调节"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/eMchg67IVFDQ0vCX9inIfg.jpg_200w_200h_4e",
+            "price":"42.90",
+            "text":"茶花58升收纳箱塑料特大号大号装衣服的箱子收纳盒家用储物加厚整理箱颜色随机"
+        },
+        {
+            "shop":"su-jiwu",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/Hd-D1Buyyz868Hz2q1dJSg.jpg_200w_200h_4e",
+            "price":"15.90",
+            "text":"苏宁极物 马卡龙彩色四季休闲防滑男士凉拖鞋浴室拖鞋透气露趾 蓝灰 285MM（适合42-43码）",
+            "id":2
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/IY9BGWrhgN60fVhLVdzM0w.png_200w_200h_4e",
+            "price":"39.90",
+            "text":"拜耳进口灭蚁药 拜灭易蚂蚁药杀虫剂灭蚁胶饵5g"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/image/dc0vp7bkpFVa1vpzNMmJGg.jpg_200w_200h_4e",
+            "price":"1499.00",
+            "text":"飞天53%vol 500ml 贵州茅台酒（带杯）2020年产 新老包装发货 酱香型白酒"
+        },
+        {
+            "shop":"",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/image/wCR0LLhV7npe3o01lgUSFg.jpg_200w_200h_4e",
+            "price":"1.15",
+            "text":"【满20件免运费】溢流香yiliuxiang 1枚装50克 国产 松花皮蛋无铅工艺皮蛋鸭蛋变蛋盒装"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/gYR2uGbnLeH1AuroJw14FA.jpg_200w_200h_4e",
+            "price":"39.90",
+            "text":"清风 抽纸 淡绿花二层200抽*20包面巾纸 餐巾纸 擦手纸"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/vI4yWWVsTDNn8fhNBlyPgw.jpg_200w_200h_4e",
+            "price":"39.90",
+            "text":"维达（Vinda） 抽纸 细韧3层140抽软抽*18包（小规格） 面巾餐巾卫生纸巾（整箱销售）"
+        },
+        {
+            "shop":"su-zy",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/atmosphere/r0ctgjqWm5dRO1THb7y-zw.jpg_200w_200h_4e",
+            "price":"898.00",
+            "text":"万和(Vanward) 12升燃气热水器JSQ24-225T12天然气12升热水器 自适免调温 智能精控恒温 家用正品"
+        },
+        {
+            "shop":"su-hwg",
+            "pic":"//imgservice.suning.cn/uimg1/b2c/image/DHga158nVmZkz3LBR3W7bw.jpg_200w_200h_4e",
+            "price":"99.00",
+            "text":"【好体力 唤醒能量】Centrum 善存 男士复合维生素 200粒/瓶 美国进口 350克"
+        }
+    ]
+}

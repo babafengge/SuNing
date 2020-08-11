@@ -1,0 +1,45 @@
+{
+    "code":200,
+    "status":"成功",
+    "obj":{
+        "swiperpic":[
+            "//imgservice.suning.cn/uimg1/b2c/image/fiAB7ICAy4401IXHOzI1Bg.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/53ACL1aU1DE162Xta3K7PA.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/t5sx-U7ozaKA_JhaiD7IjQ.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/KMyotHvfs6rVw9t-1RNokw.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/W7Y8txQJJNaWudM38LJ71Q.jpg_800w_800h_4e_100Q_is"
+        ],
+        "swiperback":"http://image.suning.cn/uimg/pcms/label10/110085792891916207510800_39.png",
+        "price":"15.90",
+        "shop":"su-zy",
+        "text":"苏宁极物 马卡龙彩色四季休闲防滑男士凉拖鞋浴室拖鞋透气露趾 蓝灰 285MM（适合42-43码）",
+        "detailpic":[
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/1xpy7IDwRQsJ9O6YM2LfWQ.png",
+            "https://image.suning.cn/uimg/sop/commodity/123665148610775390503596_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/121563115092572894260000_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/567013874494963536100000_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/743213122745234789966900_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/559509839776532881802900_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/218923375187379297347740_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/206258498034778976194940_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/130934103175305483774600_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/155660941126826367939060_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/141184669454894735621890_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/394980908151137810484770_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/130083196046311923170650_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/957220231547378791712000_x.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/tCh2_ILhZQU9ZlsYl1Xd8Q.png",
+            "https://image.suning.cn/uimg/sop/commodity/968866327137092939247050_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/177776627077078434514760_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/690373665104140186277670_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/210134235032789787078010_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/175026194711035056793780_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/106064250616496346076948_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/154286471563936725816730_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/161087068116798319984872_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/811498187583028166571300_x.jpg",
+            "https://image.suning.cn/uimg/sop/commodity/842707703416751289953500_x.jpg",
+            "//image2.suning.cn/uimg/cms/img/158399988964950645.png"
+        ]
+    }
+}

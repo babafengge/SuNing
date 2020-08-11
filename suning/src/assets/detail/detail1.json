@@ -1,0 +1,38 @@
+{
+    "code":200,
+    "status":"成功",
+    "obj":{
+        "swiperpic":[
+            "//imgservice.suning.cn/uimg1/b2c/image/4_SjvFsLFGK96ZLTK6k-cw.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/pharpEoGfraIpnNEVqXO3A.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/EA7uM6y5r9qZDaamhYTRNg.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/BejS8JZJ6Wa1judlpbV3sQ.jpg_800w_800h_4e_100Q_is",
+            "//imgservice.suning.cn/uimg1/b2c/image/lQ5nlQcmxMHulGQW62_jMw.jpg_800w_800h_4e_100Q_is"
+        ],
+        "swiperback":"http://image.suning.cn/uimg/pcms/label10/110085792891916207510800_39.png",
+        "price":"14.90",
+        "shop":"su-zy",
+        "text":"苏宁极物 轻弹居家拖鞋凉拖浴室防滑纯色eva软底情侣 玫瑰灰粉 240MM（适合37-38码）",
+        "detailpic":[
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/L7GtjWcggxrdl2VMG6dX5A.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/tUuVJ3lQVUhulzAehdo48g.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/dHjW-sk2IdameFzrh16SYQ.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/HOrssj0MbdXYd6DtdP05xg.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/FVfrcpGDw16O32-hgjcNrw.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/mDttIr4sUYMGAAA3T6B-oA.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/DMfaDyr9G1x9JpzoukMdJw.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/O_lt8MDR8kT9DXeTP6FgZg.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/p7Pd1v5bc64MiteCE-0Y-A.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/XIOTnO5PFk_4AFWAogQa2w.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/R3n9Ug7Gvr2rGyPV9XdS6w.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/iNcc6kgzerOHDsuUrhNEtw.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/Y62-7DTKdYltaHR2UVw8kA.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/k2UhYgH3feHLPH3OWzkfuA.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/D4VMJ6SzKWIMkTtnwXfhdA.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/wSdq7gsr_msyR3MeOaM3gA.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/iN8pAFARXDKlWP1EELDkCw.jpg",
+            "https://uimgproxy.suning.cn/uimg1/sop/commodity/eXalnbbpt67ZsXcnPcfQEw.jpg",
+            "//image2.suning.cn/uimg/cms/img/158399988964950645.png"
+        ]
+    }
+}
