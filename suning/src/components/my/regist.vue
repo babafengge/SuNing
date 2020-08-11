@@ -88,7 +88,7 @@ export default {
           alert('请输入正确的密码');
           // return false;
         }
-        else if(this.namemsg =='15806294707'&& this.pwdmsg =="Lww12345678"){
+        else if(this.namemsg =='13111111111'&& this.pwdmsg =="Lww12345678"){
           this.$store.commit("loginAfter")
         }
       }

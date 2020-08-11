@@ -232,8 +232,8 @@
     </div>
 
     <!-- 跳转到登录组件 -->
-    <div class="to-login" @click="jumpLogin" v-if='isDel'>
-      <img src="https://image3.suning.cn/uimg/cms/img/157588645542963955.png" />
+    <div class="to-login" @click="jumpLogin" v-if="login">
+      <img v-if="isDel" src="https://image3.suning.cn/uimg/cms/img/157588645542963955.png" />
     </div>
 
     <tab-bar></tab-bar>
@@ -251,6 +251,11 @@ import Ulike from "../components/home/Ulike.vue";
 import MaskLoad from "../components/home/MaskLoad.vue";
 import Search from "./Search.vue";
 export default {
+  computed: {
+    login() {
+      return this.$store.state.login;
+    },
+  },
   data() {
     return {
       enterList1: [
@@ -299,7 +304,7 @@ export default {
       ],
       isShow: false,
       scroll: null,
-      isDel:true,
+      isDel: true,
     };
   },
 
@@ -321,12 +326,12 @@ export default {
         that.isShow = true;
       } else {
         that.isShow = false;
-      };
+      }
 
-      if(-position.y >7780){
-        that.isDel = false
-      }else{
-        that.isDel = true
+      if (-position.y > 7780) {
+        that.isDel = false;
+      } else {
+        that.isDel = true;
       }
     });
     // 返回顶部
@@ -347,12 +352,12 @@ export default {
       // 返回顶部
       this.scroll.scrollTo(0, 0, 500);
     },
-    jumpLogin(){
+    jumpLogin() {
       this.$router.push({
-        path:"/my"
+        path: "/my",
       });
       this.isDel = !this.isDel;
-    }
+    },
   },
   components: {
     TabBar,
@@ -361,7 +366,7 @@ export default {
     FourContent,
     FourBd,
     Ulike,
-    MaskLoad
+    MaskLoad,
   },
 };
 </script>
