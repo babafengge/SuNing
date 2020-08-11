@@ -61,7 +61,7 @@ export default {
 <style scoped>
 .swiper-container {
   height: 100%;
-  width: 94%;
+  width: 100%;
   /* border-radius: 8px; */
 }
 

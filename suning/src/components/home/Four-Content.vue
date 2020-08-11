@@ -90,6 +90,13 @@ export default {
   border-radius: 0.44rem;
 }
 
+.activity-top-content{
+  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
 .activity-item {
   display: inline-block;
   flex-shrink: 1;
@@ -121,8 +128,11 @@ export default {
   border-radius: 6px;
   width: 0.8rem;
   margin-left: 0.1rem;
-
   background: rgb(255, 219, 71);
+}
+
+.time span{
+  margin: .05rem;
 }
 
 .img-content-wrap p {

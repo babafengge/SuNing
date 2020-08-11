@@ -513,6 +513,7 @@ form > input {
 .enter-list-wrap2 {
   width: 100%;
   display: flex;
+  overflow: hidden;
   justify-content: center;
 }
 

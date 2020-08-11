@@ -2,13 +2,12 @@
     "code": 200, 
     "status": "成功", 
     "list": [
-        {
-            "proImg":"//uimgproxy.suning.cn/uimg1/pcpv/pcpv/iwogh/2020/08/06/20/iwoghBannerPicture/8935458609724bff8e62cd4f3ee2416e.png",
-            "desc":"Apple iPhone 11 128G 黑色 移动联通电信4G全网通手机",
+        {   "id":"1",
+            "proImg":"http://localhost:5500/src/assets/home-img/tuoxie.jpg",
+            "desc":"苏宁极物 轻弹居家拖鞋凉拖浴室防滑纯色eva软底情侣 玫瑰灰粉 240MM（适合37-38码）",
             "proIcon":"自营",
-            "price":"4999",
-            "adv":"广告",
-            "url":"https://th.suning.com/cpc/syt/clickInfo?companyCode=50060903&adtype=1&clickUrl=http%3A%2F%2Fproduct.suning.com%2F0000000000%2F11346320883.html&s=wap&cpcTranInfoStr=4zu0aiuiXOeRBD-CThjxMwBMbJqXyUp06Jl1iEzHkSFQv4CZ1779lN5SEavCnvYVZft8SyN91BVnGEOzGHOS2a0GMQeGWYvsX3CIr3oyiLG_CjA1Vq-BBnSq-qgSBJWihx9UykOstVKQcndGiSV6Ug&click_id=axqdM380baaOCcs11000000000gP6N7DAdkiji7O8&k=9avBtSZmUggj-DgL2BhK7g0ti7cj73OBH3HjDY5O1kefzKWJjlhEwx-bj286QC3hMEsU3shJbvcmCtjGNnVrgG3DMYhCMKoSnKOoybpCAvgdn-pSgf9CTvovE1oIIptXSHGaozE9RYqVEAjo9LAYqpD_DtQmQ7gvxjl-FrHUSYhzifQWBrWi37bXplkOU7o8F2nKV2oEl-wro_oJYG5BLfU0894RfxD_lIznOBG5OKiMMvzE5dt6mWHanP0TSdPaCXxEJQ8anP9JeCKYALzgNvg0U5DNkrUq5sM4OR0kEPSzgNEgsHCZNWfo8mB4yAtUbXNRiQBoTNQudZvI0S0UPTq6A2kCIu0AKjePu6ezy0G26f9QbZk2AGrBD7HsWQpL9r2r4NuPm_xd5laYA37m8ZAHx4IBoANPdJ9aecU-5e2BctQZ7pu3-dcMAp13FAvNDDY76d2LzCCxbxLw8YS6AA&cmdCode=11346320883&tid=104039752270000004320200808&sid=40091925"
+            "price":"14.90",
+            "adv":"广告"
         },
         {
             "proImg":"//imgservice.suning.cn/uimg1/b2c/image/hZFpJhfKylFlwAmqc69nyQ.jpg",
