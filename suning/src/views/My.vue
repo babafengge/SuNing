@@ -1,54 +1,64 @@
 <template>
-  <div class="my-box">
-    <div class="top-nav">
-      <a class="first-nav">联系客服</a>
-      <a>企业注册</a>
-    </div>
-    <div class="middle">
-      <h2>
-        <img src="../assets/myimg/suning-icon.png" alt="图片加载失败">
-        欢迎登陆苏宁易购
-      </h2>
-      <regist></regist>
-      <div class="otherbutton">验证码登录</div>
-    </div>
-    <div class="footer">
-      <div>
-        <div class="f-nav">其他登陆方式</div>
-        <div class="f-icons">
-          <a><img src="../assets/myimg/qq.png" alt="图片加载失败"></a>
-          <a><img src="../assets/myimg/zfb.png" alt="图片加载失败"></a>
-          <a><img src="../assets/myimg/epp.png" alt="图片加载失败"></a>
-          <a><img src="../assets/myimg/k.png" alt="图片加载失败"></a>
-        </div>
-        <div class="f-last">
-          <span>我同意</span>
-          <a>《苏宁易购会员章程》</a>
-          <a>《易付宝协议》</a>
-        </div>
+<div class="content">
+    <div class="my-box" v-if="seen">
+      <div class="top-nav">
+        <a class="first-nav">联系客服</a>
+        <a>企业注册</a>
       </div>
+      <div class="middle">
+        <h2>
+          <img src="../assets/myimg/suning-icon.png" alt="图片加载失败">
+          欢迎登陆苏宁易购
+        </h2>
+        <regist></regist>
+        <div class="otherbutton">验证码登录</div>
+      </div>
+      <div class="footer">
+        <div>
+          <div class="f-nav">其他登陆方式</div>
+          <div class="f-icons">
+            <a><img src="../assets/myimg/qq.png" alt="图片加载失败"></a>
+            <a><img src="../assets/myimg/zfb.png" alt="图片加载失败"></a>
+            <a><img src="../assets/myimg/epp.png" alt="图片加载失败"></a>
+            <a><img src="../assets/myimg/k.png" alt="图片加载失败"></a>
+          </div>
+          <div class="f-last">
+            <span>我同意</span>
+            <a>《苏宁易购会员章程》</a>
+            <a>《易付宝协议》</a>
+          </div>
+        </div>
 
+      </div>
     </div>
-  </div>
+    <enroll v-else></enroll>
+</div>
 </template>
 
 <script>
 import regist from "../components/my/regist.vue"
+import enroll from "../components/my/enroll.vue"
 
 export default {
-  data (){
-    return{
-     
+  computed:{
+    seen(){
+      return this.$store.state.login
     }
   },
   components:{
     "regist":regist,
+    "enroll":enroll
   }
 }
 </script>
 
 <style scoped>
+.content{
+  height: 100%;
+  display: flex;
+}
 .my-box{
+  width: 100%;
   background-color: white;
   height: 100%;
   display: flex;
@@ -88,9 +98,6 @@ h2 img{
   text-align: center;
 }
 .footer{
-  /* left: 2.9rem;
-  bottom: 0.84rem; 
-  width: 9.6rem;*/
   text-align: center;
   font-size: .4rem;
   color: #999;

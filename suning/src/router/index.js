@@ -7,6 +7,8 @@ import My from '../views/My.vue'
 import Search from '../views/Search.vue'
 import ShopCar from '../views/ShopCar.vue'
 
+import enroll from '../components/my/enroll.vue'
+import regist from '../components/my/regist.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,14 @@ const routes = [{
   {
     path: '/shopCar',
     component: ShopCar
+  },
+  {
+    path: '/regist',
+    component: regist
+  },
+  {
+    path: '/enroll',
+    component: enroll
   }
 ]
 
