@@ -254,57 +254,57 @@ export default {
   computed: {
     login() {
       return this.$store.state.login;
-    },
+    }
   },
   data() {
     return {
       enterList1: [
         {
           icon: require("../assets/home-img/low-price.png"),
-          title: "天天低价",
+          title: "天天低价"
         },
         {
           icon: require("../assets/home-img/sn-market.png"),
-          title: "苏宁超市",
+          title: "苏宁超市"
         },
         {
           icon: require("../assets/home-img/sn-pingou.png"),
-          title: "苏宁拼购",
+          title: "苏宁拼购"
         },
         {
           icon: require("../assets/home-img/5G-phone.png"),
-          title: "5G手机",
+          title: "5G手机"
         },
         {
           icon: require("../assets/home-img/sn-jiadian.png"),
-          title: "苏宁家电",
-        },
+          title: "苏宁家电"
+        }
       ],
       enterList2: [
         {
           icon: require("../assets/home-img/free-fruit.png"),
-          title: "免费水果",
+          title: "免费水果"
         },
         {
           icon: require("../assets/home-img/xiaoxiaole.png"),
-          title: "赚钱消消乐",
+          title: "赚钱消消乐"
         },
         {
           icon: require("../assets/home-img/youli.png"),
-          title: "签到有礼",
+          title: "签到有礼"
         },
         {
           icon: require("../assets/home-img/linquan.png"),
-          title: "领券中心",
+          title: "领券中心"
         },
         {
           icon: require("../assets/home-img/more-channel.png"),
-          title: "更多频道",
-        },
+          title: "更多频道"
+        }
       ],
       isShow: false,
       scroll: null,
-      isDel: true,
+      isDel: true
     };
   },
 
@@ -314,13 +314,13 @@ export default {
       mouseWheel: {
         // pc端同样能滑动
         speed: 20,
-        invert: false,
+        invert: false
       },
       probeType: 3,
-      click: true,
+      click: true
     });
 
-    this.scroll.on("scroll", function (position) {
+    this.scroll.on("scroll", function(position) {
       // console.log(position);
       if (-position.y > 300) {
         that.isShow = true;
@@ -340,12 +340,12 @@ export default {
   computed: {
     swiper() {
       return this.$refs.mySwiper.$swiper;
-    },
+    }
   },
   methods: {
     jumpSearch() {
       this.$router.push({
-        path: "/search",
+        path: "/search"
       });
     },
     backTop() {
@@ -354,10 +354,10 @@ export default {
     },
     jumpLogin() {
       this.$router.push({
-        path: "/my",
+        path: "/my"
       });
       this.isDel = !this.isDel;
-    },
+    }
   },
   components: {
     TabBar,
@@ -366,8 +366,8 @@ export default {
     FourContent,
     FourBd,
     Ulike,
-    MaskLoad,
-  },
+    MaskLoad
+  }
 };
 </script>
 
