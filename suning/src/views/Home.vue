@@ -251,11 +251,6 @@ import Ulike from "../components/home/Ulike.vue";
 import MaskLoad from "../components/home/MaskLoad.vue";
 import Search from "./Search.vue";
 export default {
-  computed: {
-    login() {
-      return this.$store.state.login;
-    },
-  },
   data() {
     return {
       enterList1: [
@@ -341,6 +336,9 @@ export default {
     swiper() {
       return this.$refs.mySwiper.$swiper;
     },
+    login() {
+      return this.$store.state.login;
+    }
   },
   methods: {
     jumpSearch() {
