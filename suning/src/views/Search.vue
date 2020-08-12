@@ -32,15 +32,36 @@
     <!-- 热门搜索 -->
     <div class="hot-search-wrap">
       <h2>热门搜索</h2>
+
       <div class="hot-search">
-        <a
-          :href="item.listUrl"
-          v-for="(item,index) in hotList"
-          :key="item.content"
-          ref="changeColor"
-        >
-          <span :class="{isActive:item.highlight}">{{item.content}}</span>
+        <a :href="item.listUrl" v-for="(item,index) in hotList" :key="item.content" ref="changeColor">
+          <span :class="{isActive:item.highlight}" @click="addHistory(index)">{{item.content}}</span>
         </a>
+      </div>
+    </div>
+    <!-- 历史搜索 -->
+    <div class="history-wrap">
+      <div class="his-top-wrap" v-if="isSeen">
+        <h2>历史搜索</h2>
+        <img src="../assets/home-img/trash-icon.png" @click="empty()" />
+      </div>
+      <div class="histroySearch">
+        <a :href="item.listUrl" v-for="item in historyList">
+          <span>{{item.content}}</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="search-mask" v-if="isFound">
+      <div class="mask-middle-wrap">
+        <div class="mask-top-content">
+          <p>温馨提示</p>
+          <p>确定清空历史数据？</p>
+        </div>
+        <div class="mask-btn">
+          <p @click="isFound=false">取消</p>
+          <p @click="sure">确定</p>
+        </div>
       </div>
     </div>
   </div>
@@ -118,8 +139,28 @@ export default {
           highlight: false
         }
       ],
-      historyList: []
+      historyList: [],
+      isDisplay: false,
+      isFound: false,
+      isSeen: false
     };
+  },
+  created() {
+    let list = JSON.parse(localStorage.getItem("historyList"));
+    if (list) {
+      this.historyList = list;
+    }
+  },
+  watch: {
+    "historyList.length": {
+      handler(historyList) {
+        if (this.historyList.length == 0) {
+          this.isSeen = false;
+        } else {
+          this.isSeen = true;
+        }
+      }
+    }
   },
   methods: {
     changeValue() {
@@ -127,6 +168,28 @@ export default {
     },
     backValue() {
       this.$refs.inputValue.placeholder = this.blurValue;
+    },
+    addHistory(index) {
+      
+      this.isDisplay = true;
+      this.isSeen = true;
+      if (this.historyList.indexOf(this.hotList[index]) > -1) {
+        return;
+      } else {
+        this.historyList.unshift(this.hotList[index]);
+        localStorage.setItem("historyList", JSON.stringify(this.historyList));
+      }
+    },
+    empty() {
+      this.isFound = true;
+    },
+    sure() {
+      this.historyList = [];
+      localStorage.setItem("historyList", JSON.stringify(this.historyList));
+      // console.log(list);
+      this.historyList.length = 0;
+      this.isFound = false;
+      this.isSeen = false;
     }
   }
 };
@@ -210,8 +273,13 @@ form > input {
   align-items: flex-start;
 }
 
-.hot-search-wrap h2 {
-  margin-left: 0.1rem;
+.his-top-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
   line-height: 0.96rem;
   height: 0.96rem;
   color: #999;
@@ -227,7 +295,10 @@ form > input {
   flex-wrap: wrap;
 }
 
-.hot-search a {
+.hot-search a,
+.histroySearch a {
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
   display: inline-block;
   width: 31.5%;
   height: 1.3rem;
@@ -242,7 +313,61 @@ form > input {
   overflow: hidden;
 }
 
+.history-wrap {
+  width: 92%;
+  margin: 0 auto;
+  padding-top: 0.8rem;
+  margin-top: 1.2rem;
+  border-top: 1px solid rgb(226, 226, 226);
+}
+
 .isActive {
   color: #ff6600;
+}
+
+.search-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mask-middle-wrap {
+  width: 13rem;
+  height: 5.28rem;
+  background: white;
+  position: absolute;
+  border-radius: 8px;
+  top: 40%;
+  left: 10%;
+  text-align: center;
+  font-size: 0.7rem;
+  overflow: hidden;
+}
+
+.mask-top-content {
+  display: flex;
+  height: 3rem;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.mask-btn {
+  display: flex;
+  justify-content: space-around;
+  height: 2.28rem;
+  line-height: 2.28rem;
+}
+
+.mask-btn p {
+  flex-grow: 1;
+  border: 1px solid rgb(226, 226, 226);
+}
+
+.mask-btn p:nth-child(2) {
+  color: #eda200;
 }
 </style>
