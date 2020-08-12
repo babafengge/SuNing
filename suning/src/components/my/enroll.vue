@@ -120,7 +120,7 @@
         <div class="myshow">
           <div class="my-show"></div>
           <div class="guang"></div>
-          <div class="circl circl1">
+          <div class="circl circl1" >
               <img src="../../assets/myimg/like3.png" alt="图片加载失败" />
           </div>
           <div class="circl circl2">

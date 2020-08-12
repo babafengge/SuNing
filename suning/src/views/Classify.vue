@@ -2,7 +2,7 @@
     <div class="ify-box">
         <div class="ify-header">
             <div class="ify-hdleft">商品分类</div>
-            <div class="ify-hdright">
+            <div class="ify-hdright" @click="$router.push('/search')">
                 <p>运动手表</p>
             </div>
         </div>

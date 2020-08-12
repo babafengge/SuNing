@@ -18,101 +18,26 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
     data(){
         return{
-            recomlist:[
-                {
-                    title:"热门推荐",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/sjsm-mbsb.jpg"),
-                            text:"手机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-bjb.jpg"),
-                            text:"笔记本"
-                        },
-                        {
-                            img:require("../../assets/flyimg/pbdn-ipad.jpg"),
-                            text:"平板电脑"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-bx.jpg"),
-                            text:"冰箱"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-dfs.jpg"),
-                            text:"电风扇"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-pbj.jpg"),
-                            text:"破壁机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-kt.jpg"),
-                            text:"空调"
-                        },
-                        {
-                            img:require("../../assets/flyimg/ds-ds.jpg"),
-                            text:"电视"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-rsq.jpg"),
-                            text:"热水器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-yl.jpg"),
-                            text:"哑铃"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-yjd.jpg"),
-                            text:"瑜伽垫"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-pbj.jpg"),
-                            text:"跑步机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-xyj.jpg"),
-                            text:"洗衣机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-sb.png"),
-                            text:"手表"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yynf-mmnf.jpg"),
-                            text:"奶粉"
-                        },
-                        {
-                            img:require("../../assets/flyimg/jxpl-bj.jpg"),
-                            text:"白酒"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-xxls.jpg"),
-                            text:"休闲零食"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-sg.jpg"),
-                            text:"水果"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-ts.jpg"),
-                            text:"文化图书"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-shyz.jpg"),
-                            text:"生活用纸"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-hjxl.jpg"),
-                            text:"黄金项链"
-                        }
-                    ]
-                }
-            ]
+            recomlist:[]
         }
+    },
+    created() {
+        let url = "http://localhost:5500/src/components/data/recommendation.json";
+        let that = this;
+        axios
+        .get(url)
+        .then(function(response) {
+            if (response.data.code == 200) {
+            that.recomlist = response.data.recomlist;
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
     }
 }
 </script>

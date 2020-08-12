@@ -14,191 +14,33 @@
         </div>
     </div>
     <div class="lastcont">
-        <a>进入黄金珠宝频道</a>
+        <a href="https://c.m.suning.com/zbcheng.html">进入黄金珠宝频道</a>
     </div>
 </div>
     
 </template>
 
 <script>
+import axios from "axios"
 export default {
     data(){
         return{
-            recomlist:[
-                {
-                    title:"优质黄金品牌",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/ppq-zdf.jpg"),
-                            text:"周大福"
-                        },
-                        {
-                            img:require("../../assets/flyimg/ppq-zss.jpg"),
-                            text:"周生生"
-                        },
-                        {
-                            img:require("../../assets/flyimg/ppq-zds.jpg"),
-                            text:"周大生"
-                        }
-                    ]
-                },
-                {
-                    title:"金银投资",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/jytz-tzj.jpg"),
-                            text:"投资金"
-                        },
-                        {
-                            img:require("../../assets/flyimg/jytz-tzy.jpg"),
-                            text:"投资银"
-                        },
-                        {
-                            img:require("../../assets/flyimg/jytz-hjhs.jpg"),
-                            text:"黄金回收"
-                        }
-                    ]
-                },
-                {
-                    title:"K金饰品",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/kjsp-kjdz.jpg"),
-                            text:"K金吊坠"
-                        },
-                        {
-                            img:require("../../assets/flyimg/kjsp-kjxl.jpg"),
-                            text:"K金项链"
-                        },
-                        {
-                            img:require("../../assets/flyimg/kjsp-kjsl.jpg"),
-                            text:"K金手链"
-                        },
-                        {
-                            img:require("../../assets/flyimg/kjsp-kjjz.jpg"),
-                            text:"K金戒指"
-                        },
-                        {
-                            img:require("../../assets/flyimg/kjsp-kjes.jpg"),
-                            text:"K金耳饰"
-                        }
-                    ]
-                },
-                {
-                    title:"时尚饰品",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/sssp-xl.jpg"),
-                            text:"项链"
-                        },
-                        {
-                            img:require("../../assets/flyimg/sssp-fs.jpg"),
-                            text:"发饰"
-                        },
-                        {
-                            img:require("../../assets/flyimg/sssp-xz.jpg"),
-                            text:"胸针"
-                        }
-                    ]
-                },
-                {
-                    title:"铂金饰品",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/bjsp-bjjz.jpg"),
-                            text:"铂金戒指"
-                        },
-                        {
-                            img:require("../../assets/flyimg/bjsp-bjes.jpg"),
-                            text:"铂金耳饰"
-                        },
-                        {
-                            img:require("../../assets/flyimg/bjsp-bjdz.jpg"),
-                            text:"铂金吊坠"
-                        }
-                    ]
-                },
-                {
-                    title:"钻石饰品",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/zssp-lz.jpg"),
-                            text:"裸钻"
-                        },
-                        {
-                            img:require("../../assets/flyimg/zssp-zsjz.jpg"),
-                            text:"钻石戒指"
-                        },
-                        {
-                            img:require("../../assets/flyimg/zssp-zsxl.jpg"),
-                            text:"钻石项链"
-                        }
-                    ]
-                },
-                {
-                    title:"木饰手串",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/mssc-xypt.jpg"),
-                            text:"星月菩提"
-                        },
-                        {
-                            img:require("../../assets/flyimg/mssc-jgpt.jpg"),
-                            text:"金刚菩提"
-                        }
-                    ]
-                },
-                {
-                    title:"翡翠玉石",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/fcys-jz.jpg"),
-                            text:"戒指"
-                        },
-                        {
-                            img:require("../../assets/flyimg/fcys-es.jpg"),
-                            text:"耳饰"
-                        },
-                        {
-                            img:require("../../assets/flyimg/fcys-ysbj.jpg"),
-                            text:"玉石摆件"
-                        }
-                    ]
-                },
-                {
-                    title:"水晶玛瑙",
-                    recontlist:[
-                        {
-                            img:require("../../assets/flyimg/sjmn-xldz.jpg"),
-                            text:"项链/吊坠"
-                        },
-                        {
-                            img:require("../../assets/flyimg/sjmn-es.jpg"),
-                            text:"耳饰"
-                        },
-                        {
-                            img:require("../../assets/flyimg/sjmn-jz.jpg"),
-                            text:"戒指"
-                        }
-                    ]
-                },
-                {
-                    title:"品牌墙",
-                    recontlist:[
-                        {img:require("../../assets/flyimg/ppq-dr.jpg")},
-                        {img:require("../../assets/flyimg/ppq-zss.jpg")},
-                        {img:require("../../assets/flyimg/ppq-zky.png")},
-                        {img:require("../../assets/flyimg/ppq-zdf.jpg")},
-                        {img:require("../../assets/flyimg/ppq-zssj.jpg")},
-                        {img:require("../../assets/flyimg/ppq-zds.jpg")},
-                        {img:require("../../assets/flyimg/ppq-lstl.png")},
-                        {img:require("../../assets/flyimg/ppq-kld.png")},
-                        {img:require("../../assets/flyimg/ppq-lfzb.jpg")}
-                    ]
-                },
-                
-            ]
+            recomlist:[]
         }
+    },
+    created() {
+        let url = "http://localhost:5500/src/components/data/jewellery.json";
+        let that = this;
+        axios
+        .get(url)
+        .then(function(response) {
+            if (response.data.code == 200) {
+            that.recomlist = response.data.recomlist;
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
     }
 }
 </script>
