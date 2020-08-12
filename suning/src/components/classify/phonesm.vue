@@ -9,7 +9,7 @@
                 <span>{{item.title}}</span>
             </div>
             <div class="recombody">
-                <div v-for="cont in item.phcontlist" :key="cont.text" class="recomcontent">
+                <div v-for="cont in item.phcontlist" :key="cont.text" class="recomcontent" @click="$router.push('/search')">
                     <div class="contimg">
                         <img :src="cont.img" alt="图片加载失败" >
                     </div>

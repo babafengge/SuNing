@@ -1,6 +1,6 @@
 <template>
 <div  class="phone-cont">
-    <div class="topnav">
+    <div class="topnav" ref="topnav">
         <img src="../../assets/flyimg/savehouse.jpg" alt="图片加载失败">
         <div class="topscoll">
             <div class="scolllist" @click="skip(1)"><span class="holdactive" ref="cfdq">厨房电器</span></div>
@@ -14,7 +14,7 @@
             <span>{{item.title}}</span>
             </div>
             <div class="recombody">
-                <div v-for="cont in item.holdcontlist" :key="cont.text" class="recomcontent">
+                <div v-for="cont in item.holdcontlist" :key="cont.text" class="recomcontent" @click="$router.push('/search')">
                     <div class="contimg">
                         <img :src="cont.img" alt="图片加载失败" >
                     </div>
@@ -188,20 +188,20 @@ export default {
     methods:{
         midscrol(event){
             this.scrollTop = event.target.scrollTop;
-            console.log(this.scrollTop);
-            if(this.scrollTop<430){
+            // console.log(this.scrollTop);
+            if(this.scrollTop<this.$refs[0][0].offsetHeight-2){
                 this.$refs.cfdq.classList.add("holdactive")
             }else{
                 this.$refs.cfdq.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>430 && this.scrollTop<770){
+            if(this.scrollTop>this.$refs[0][0].offsetHeight-2 && this.scrollTop<this.$refs[0][0].offsetHeight+this.$refs[1][0].offsetHeight-2){
                 this.$refs.wydq.classList.add("holdactive")
             }else{
                 this.$refs.wydq.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>770){
+            if(this.scrollTop>this.$refs[0][0].offsetHeight+this.$refs[1][0].offsetHeight-2){
                 this.$refs.yzpp.classList.add("holdactive")
             }else{
                 this.$refs.yzpp.classList.remove("holdactive")
@@ -209,7 +209,7 @@ export default {
         },
         skip(key){
             var pad = document.querySelector("#skipid"+key);
-            this.$refs.midd.scrollTop=pad.offsetTop-200
+            this.$refs.midd.scrollTop=pad.offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight
         }
     }
 }

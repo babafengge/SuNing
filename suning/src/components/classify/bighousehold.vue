@@ -1,6 +1,6 @@
 <template>
 <div  class="phone-cont">
-    <div class="topnav">
+    <div class="topnav" ref="topnav">
         <div class="topscoll">
             <div class="scolllist" @click="skip(1)"><span class="holdactive" ref="kt">空调</span></div>
             <div class="scolllist" @click="skip(2)"><span ref="bx">冰箱</span></div>
@@ -12,12 +12,12 @@
         </div>
     </div>
     <div class="middle" @scroll="midscrol" ref="midd">
-        <div class="compfiy-box" :ref="index" v-for="(item,index) in holdlist" :key="item.title" :id="item.id" >
+        <div class="compfiy-box" :ref="'a'+index" v-for="(item,index) in holdlist" :key="item.title" :id="item.id" >
             <div class="recomtitle">
             <span>{{item.title}}</span>
             </div>
             <div class="recombody" >
-                <div v-for="cont in item.holdcontlist" :key="cont.text" class="recomcontent">
+                <div v-for="cont in item.holdcontlist" :key="cont.text" class="recomcontent" @click="$router.push('/search')">
                     <div class="contimg">
                         <img :src="cont.img" alt="图片加载失败" >
                     </div>
@@ -302,52 +302,54 @@ export default {
     methods:{
         midscrol(event){
             this.scrollTop = event.target.scrollTop;
-            console.log(this.scrollTop);
-            if(this.scrollTop<330){
+            // console.log(this.scrollTop);
+            if(this.scrollTop<this.$refs.a0[0].offsetHeight-1){
                 this.$refs.kt.classList.add("holdactive")
             }else{
                 this.$refs.kt.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>330 && this.scrollTop<670){
+            if(this.scrollTop>this.$refs.a1[0].offsetHeight-2 && this.scrollTop<this.$refs.a2[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2){
                 this.$refs.bx.classList.add("holdactive")
             }else{
                 this.$refs.bx.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>670&&this.scrollTop<900){
+            if(this.scrollTop>this.$refs.a2[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2&&this.scrollTop<this.$refs.a3[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2){
                 this.$refs.xyj.classList.add("holdactive")
             }else{
                 this.$refs.xyj.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>900&&this.scrollTop<1200){
+            if(this.scrollTop>this.$refs.a3[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2&&this.scrollTop<this.$refs.a4[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2){
                 this.$refs.ds.classList.add("holdactive")
             }else{
                 this.$refs.ds.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>1200&&this.scrollTop<1480){
+            if(this.scrollTop>this.$refs.a4[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2&&this.scrollTop<this.$refs.a5[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2){
                 this.$refs.jcjd.classList.add("holdactive")
             }else{
                 this.$refs.jcjd.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>1480 &&this.scrollTop<1580){
+            if(this.scrollTop>this.$refs.a5[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2 &&this.scrollTop<this.$refs.a6[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2){
                 this.$refs.sydq.classList.add("holdactive")
             }else{
                 this.$refs.sydq.classList.remove("holdactive")
             }
 
-            if(this.scrollTop>1580){
+            if(this.scrollTop>this.$refs.a6[0].offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight-2){
                 this.$refs.tjpp.classList.add("holdactive")
             }else{
                 this.$refs.tjpp.classList.remove("holdactive")
             }
         },
         skip(key){
+            // console.log(this.$refs.a0)
+            // console.log(this.$refs.topnav)
             var pad = document.querySelector("#skipid"+key);
-            this.$refs.midd.scrollTop=pad.offsetTop-115
+            this.$refs.midd.scrollTop=pad.offsetTop-this.$refs.topnav.offsetTop-this.$refs.topnav.offsetHeight
         }
     }
 }

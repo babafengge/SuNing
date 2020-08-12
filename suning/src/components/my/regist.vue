@@ -126,6 +126,7 @@ input {
   width: 6rem;
   caret-color: #fb0;
   margin-left: 0.48rem;
+  font-size: 0.6rem;
 }
 .iptsty {
   width: 12rem;
