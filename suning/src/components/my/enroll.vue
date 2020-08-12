@@ -120,7 +120,7 @@
         <div class="myshow">
           <div class="my-show"></div>
           <div class="guang"></div>
-          <div class="circl circl1">
+          <div class="circl circl1" >
               <img src="../../assets/myimg/like3.png" alt="图片加载失败" />
           </div>
           <div class="circl circl2">
@@ -144,7 +144,9 @@
         </div>
       </div>
       <div class="end"></div>
-      <div class="fixicon"></div>
+      <div class="fixicon">
+        <a href="https://qss.suning.com/604fc.htm"></a>
+      </div>
     </div>
     <tabbar></tabbar>
   </div>
@@ -489,5 +491,10 @@ h5 {
     right: .6rem;
     background: url("../../assets/myimg/question-icon.png") no-repeat;
     background-size: 1.56rem 1.56rem;
+}
+.fixicon a{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 </style>

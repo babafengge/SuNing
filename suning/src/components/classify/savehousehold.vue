@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="lastcont">
-            <a>进入生活家电频道</a>
+            <a href="https://c.m.suning.com/typindaotest.html">进入生活家电频道</a>
         </div>
     </div>
 </div>
@@ -26,190 +26,26 @@
 </template>
 
 <script>
+import axios from "axios"
 export default {
     data(){
         return{
-            computerlist:[
-                {
-                    title:"热门推荐",
-                    cptcontlist:[
-                        {
-                            img:require("../../assets/flyimg/cfjd-kx.jpg"),
-                            text:"烤箱"
-                        },
-                        {
-                            img:require("../../assets/flyimg/dnzj-yxb.jpg"),
-                            text:"榨汁机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-dfs.jpg"),
-                            text:"电风扇"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shjd-kqzg.jpg"),
-                            text:"空气炸锅"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-dbd.jpg"),
-                            text:"电饼铛"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-pbj.jpg"),
-                            text:"破壁机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shjd-xcq.jpg"),
-                            text:"吸尘器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-csj.jpg"),
-                            text:"除湿机"
-                        }
-                    ]
-                },
-                {
-                    title:"厨房家电",
-                    cptcontlist:[
-                        {
-                            img:require("../../assets/flyimg/cfjd-dfb.jpg"),
-                            text:"电饭煲"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-dylg.jpg"),
-                            text:"电压力锅"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-dsh.jpg"),
-                            text:"电水壶"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-wbl.jpg"),
-                            text:"微波炉"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-kx.jpg"),
-                            text:"烤箱"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-kfj.jpg"),
-                            text:"咖啡机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-mbj.jpg"),
-                            text:"面包机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-ysh.jpg"),
-                            text:"养生壶"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-smzj.jpg"),
-                            text:"三明治机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-snj.jpg"),
-                            text:"酸奶机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-zdq.jpg"),
-                            text:"煮蛋器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfjd-mtj.jpg"),
-                            text:"面条机"
-                        }
-                    ]
-                },
-                {
-                    title:"生活电器",
-                    cptcontlist:[
-                        {
-                            img:require("../../assets/flyimg/rmtj-dfs.jpg"),
-                            text:"电风扇"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-kqjhq.jpg"),
-                            text:"空气净化器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-xcq.jpg"),
-                            text:"吸尘器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/rmtj-csj.jpg"),
-                            text:"家用除湿机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-cmy.jpg"),
-                            text:"除螨仪"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-gyj.jpg"),
-                            text:"干衣机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-jsq.jpg"),
-                            text:"加湿器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-gtj.jpg"),
-                            text:"挂烫机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-dyd.jpg"),
-                            text:"电熨斗"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-mqxjq.jpg"),
-                            text:"毛球修剪器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/shdq-qnq.jpg"),
-                            text:"取暖器"
-                        }
-                    ]
-                },
-                {
-                    title:"个护健康",
-                    cptcontlist:[
-                        {
-                            img:require("../../assets/flyimg/ghjk-ddtxd.jpg"),
-                            text:"电动剃须刀"
-                        },
-                        {
-                            img:require("../../assets/flyimg/ghjk-dcf.jpg"),
-                            text:"电吹风"
-                        },
-                        {
-                            img:require("../../assets/flyimg/ghjk-ddys.jpg"),
-                            text:"电动牙刷"
-                        },
-                        {
-                            img:require("../../assets/flyimg/ghjk-mry.jpg"),
-                            text:"美容仪"
-                        },
-                        {
-                            img:require("../../assets/flyimg/ghjk-amy.jpg"),
-                            text:"按摩椅"
-                        }
-                    ]
-                },
-                {
-                    title:"推荐品牌",
-                    cptcontlist:[
-                        {img:require("../../assets/flyimg/tjpp-sbe.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-jy.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-rt.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-gl.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-kas.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-flp.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-dl.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-mf.jpg")},
-                        {img:require("../../assets/flyimg/tjpp-xx.jpg")},
-                    ]
-                }
-            ]
+            computerlist:[]
         }
+    },
+    created() {
+        let url = "http://localhost:5500/src/components/data/savehousehold.json";
+        let that = this;
+        axios
+        .get(url)
+        .then(function(response) {
+            if (response.data.code == 200) {
+            that.computerlist = response.data.computerlist;
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
     }
 }
 </script>

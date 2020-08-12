@@ -24,166 +24,34 @@
         </div>
     </div>
     <div class="lastcont">
-        <a>进入厨卫电器频道</a>
+        <a href="http://c.m.suning.com/jdscw.html">进入厨卫电器频道</a>
     </div>
 </div>
     
 </template>
 
 <script>
+import axios from "axios"
 export default {
     data(){
         return{
-            holdlist:[
-                {
-                    title:"厨房电器",
-                    id:"skipid1",
-                    holdcontlist:[
-                        {
-                            img:require("../../assets/flyimg/cfdq-yyj.jpg"),
-                            text:"油烟机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-rqz.jpg"),
-                            text:"燃气灶"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-yztc.jpg"),
-                            text:"烟灶套餐"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-jcz.jpg"),
-                            text:"集成灶"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-xdg.jpg"),
-                            text:"消毒柜"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-jsq.jpg"),
-                            text:"净水器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-ysj.jpg"),
-                            text:"饮水机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-jslt.jpg"),
-                            text:"净水龙头"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-xwj.jpg"),
-                            text:"洗碗机"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-wzk.png"),
-                            text:"微蒸烤"
-                        },
-                        {
-                            img:require("../../assets/flyimg/cfdq-xcj.jpg"),
-                            text:"洗菜机"
-                        }
-                    ]
-                },
-                {
-                    title:"卫浴电器",
-                    id:"skipid2",
-                    holdcontlist:[
-                        {
-                            img:require("../../assets/flyimg/wydq-rqrsq.jpg"),
-                            text:"燃气热水器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-drsq.jpg"),
-                            text:"电热水器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-jrsrsq.jpg"),
-                            text:"即热式热水器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-drslt.jpg"),
-                            text:"电热水龙头"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-cb.jpg"),
-                            text:"厨宝"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-tynrsq.jpg"),
-                            text:"太阳能热水器"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-znmtg.jpg"),
-                            text:"智能马桶盖"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-ddlyj.jpg"),
-                            text:"电动晾衣架"
-                        },
-                        {
-                            img:require("../../assets/flyimg/wydq-yb.jpg"),
-                            text:"浴霸"
-                        }
-                    ]
-                },
-                {
-                    title:"优质品牌",
-                    id:"skipid3",
-                    holdcontlist:[
-                        {
-                            img:require("../../assets/flyimg/yzpp-fqmx.png"),
-                            text:"分期免息"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-sms.jpg"),
-                            text:"史密斯"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-lb.jpg"),
-                            text:"老板"
-                        },
-                        {
-                            img:require("../../assets/flyimg/tjpp-xmz.jpg"),
-                            text:"西门子"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-ft.jpg"),
-                            text:"方太"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-kb.jpg"),
-                            text:"康宝"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-wjl.jpg"),
-                            text:"万家乐"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-ln.jpg"),
-                            text:"林内"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-ns.jpg"),
-                            text:"能率"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-qy.jpg"),
-                            text:"沁园"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-md.jpg"),
-                            text:"美的"
-                        },
-                        {
-                            img:require("../../assets/flyimg/yzpp-mq.jpg"),
-                            text:"名气"
-                        }
-                    ]
-                }
-            ],
+            holdlist:[],
             scollTop:null,
         }
+    },
+    created() {
+        let url = "http://localhost:5500/src/components/data/cookhouse.json";
+        let that = this;
+        axios
+        .get(url)
+        .then(function(response) {
+            if (response.data.code == 200) {
+            that.holdlist = response.data.holdlist;
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
     },
     methods:{
         midscrol(event){
