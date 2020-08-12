@@ -34,7 +34,7 @@
       <h2>热门搜索</h2>
 
       <div class="hot-search">
-        <a :href="item.listUrl" v-for="(item,index) in hotList" :key="item.content" ref="changeColor">
+        <a href="#" v-for="(item,index) in hotList" :key="item.content" ref="changeColor">
           <span :class="{isActive:item.highlight}" @click="addHistory(index)">{{item.content}}</span>
         </a>
       </div>
@@ -46,7 +46,7 @@
         <img src="../assets/home-img/trash-icon.png" @click="empty()" />
       </div>
       <div class="histroySearch">
-        <a :href="item.listUrl" v-for="item in historyList">
+        <a href="#" v-for="item in historyList">
           <span>{{item.content}}</span>
         </a>
       </div>
