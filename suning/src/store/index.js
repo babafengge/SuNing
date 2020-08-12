@@ -33,7 +33,11 @@ export default new Vuex.Store({
             text: item.text,
             num: 1,
             checked: true,
-            id: item.id
+            id: item.id,
+            startX:"",
+            endX:"",
+            movelength:0,
+            movedirect:true
           })
         }
       } else {
@@ -51,7 +55,11 @@ export default new Vuex.Store({
             text: item.text,
             num: 1,
             checked: true,
-            id: item.id
+            id: item.id,
+            startX:"",
+            endX:"",
+            movelength:0,
+            movedirect:true
           })
         }
       }
@@ -155,8 +163,13 @@ export default new Vuex.Store({
           i--
         }
       }
+    },
+    delhwgOwn(state,index){
+      state.suhwg.splice(index,1)
+    },
+    delzyOwn(state,index){
+      state.suzy.splice(index,1)
     }
-
   },
   actions: {},
   modules: {}

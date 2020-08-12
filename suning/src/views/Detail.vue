@@ -149,7 +149,7 @@
         <div class="sn-cell5" style="padding-top:0">
           <div class="sn-cell2" style="font-weight:700">评价（4500+）</div>
           <div class="sn-cell3">
-            <div class="sn-cell31">99%好评率</div>
+            <div class="sn-cell31"><a href="https://revnode.suning.com/review/wap/cluster_review_page/general--000000011705010567-0000000000--.htm">99%好评率</a></div>
           </div>
         </div>
         <div class="chat-container">
